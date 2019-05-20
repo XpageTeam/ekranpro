@@ -1,0 +1,84 @@
+.about-top
+	position: relative
+	
+	padding-bottom: 95px
+	background: url('../img/photos/about-bg-1.png') no-repeat right -125px top, url('../img/photos/about-bg-2.png') no-repeat left bottom
+
+	.scroll-wr
+		position: absolute
+		left: 120px
+		bottom: 258px
+
+	.socials
+		right: 50px
+		bottom: 180px
+
+.about-intro
+	max-width: 740px
+	padding: 363px 0 192px 172px
+	
+	&__title
+		font-family: "GothamPro"
+		font-size: rem(56)
+		font-weight: 300
+		line-height: 1
+		margin-bottom: 35px
+
+
+
+@media screen and (max-width: 1600px)
+
+	.about
+		&-intro
+			padding: 225px 0 220px 172px
+
+		&-top 
+			.socials
+				bottom: 50%
+
+			.scroll
+				bottom: 50%
+
+@media screen and (max-width: 1500px)
+
+	.about-top
+		background: url('../img/photos/about-bg-1.png') no-repeat right -30% top, url('../img/photos/about-bg-2.png') no-repeat left bottom
+
+@media screen and (max-width: 1300px)
+
+	.about-top
+		background: url('../img/photos/about-bg-1.png') no-repeat right -50% top, url('../img/photos/about-bg-2.png') no-repeat left bottom
+
+@media screen and (max-width: 1200px)
+
+	.about-top
+		background: url('../img/photos/about-bg-1.png') no-repeat right top
+		background-size: 40%
+
+		.scroll, .socials
+			display: none
+			
+
+
+
+	.about-intro
+		padding: 230px 0 110px 0
+
+
+@media screen and (max-width: 660px)
+
+	.about-intro__title
+		font-size: 2rem
+
+	.about-intro
+		padding: 25px 0 40px 0
+
+	.about-top
+		background: none
+
+	.page-about
+
+		.content > *:first-child
+			padding-top: 107px !important
+
+

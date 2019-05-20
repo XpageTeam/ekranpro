@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Led
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.color-blue.loading
+		include inc/header.pug
+		
+		main#content
+			.content
+				.main-banner-inner
+
+					.wrapper
+						.scroll Scroll
+						.socials
+							.socials__item
+								a(href="#") Facebook
+							.socials__item
+								a(href="#") Instagram
+							.socials__item
+								a(href="#") Вконтакте
+						.main-banner-inner__cont
+							.main-banner-inner__img
+								picture
+									source(srcset="img/photos/main-slide-inner-1.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+									source(srcset="img/photos/main-slide-inner-1.jpg" media="screen and (max-width: 480px)")
+									img
+								.links
+									.links__list
+										a(href="#").links__item.links--blue.active
+										a(href="#").links__item.links--red
+										a(href="#").links__item.links--green
+										a(href="#").links__item.links--orange
+							.main-banner-inner__info
+								.main-banner-inner__title LED<br> экраны
+								.main-banner-inner__text Помогаем клиентам легко сориентироваться в планировке торгового центра, вокзала, аэропорта с помощью сенсорной навигации. Для установки на зданиях и уличных конструкциях предлагается светодиодный экран купить с возможностью дальнейшего закрепленияна металлическом основании. Отдельные светодиоды такого оборудования расположены на расстоянии, которое определено минимальной дальностью просмотра.
+								a(href="#").btn Заказать услугу
+
+				.features
+					.wrapper 
+						.features-cont
+							.features__list
+								.features__item
+									.features__item-img
+										span
+											include ../img/photos/features-1.svg
+									.features__item-title Уличные экраны
+								.features__item
+									.features__item-img
+										span
+											include ../img/photos/features-2.svg
+									.features__item-title Интерьерные экраны
+								.features__item
+									.features__item-img
+										span
+											include ../img/photos/features-3.svg
+									.features__item-title Медиафасады
+								.features__item
+									.features__item-img
+										span
+											include ../img/photos/features-4.svg
+									.features__item-title Экраны для видеостен
+
+				.advantages
+					.wrapper
+						.advantages-cont.tabs
+							.advantages-list__title
+								.advantages-item__title.tabs-tab.active(data-id='1') 
+									span.ico-cross 
+									| Прямые, дистрибьютерские цены от проверенных поставщиков
+								.advantages-item__title.tabs-tab(data-id='2')
+									span.ico-cross 
+									| Собственное производство сертифицированноепо ISO 9001:2015
+								.advantages-item__title.tabs-tab(data-id='3')
+									span.ico-cross 
+									| Эффективно налаженные процессы
+								.advantages-item__title.tabs-tab(data-id='4') 
+									span.ico-cross 
+									| Большой склад комплектующих
+								.advantages-item__title.tabs-tab(data-id='5') 
+									span.ico-cross 
+									| Опыт более 7 лет
+
+							.advantages-list__text
+								.advantages-item__text.tabs-content.active(data-id='1')
+									.text-page 
+										p 1 Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.  
+										p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера. 
+								.advantages-item__text.tabs-content(data-id='2')
+									.text-page 
+										p 2 Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.  
+										p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера. 
+								.advantages-item__text.tabs-content(data-id='3')
+									.text-page 
+										p 3 Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.  
+										p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера. 
+								.advantages-item__text.tabs-content(data-id='4')
+									.text-page 
+										p 4 Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.  
+										p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера. 
+								.advantages-item__text.tabs-content(data-id='5')
+									.text-page 
+										p 5 Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.  
+										p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.
+
+				.review
+					.wrapper
+						.review__list
+							each text, i in [{title: 'Отзыв от Торгового центра «Метрополис»', text: '«Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.»'}, {title: 'Отзыв от Премиум букмекерский клуб OscarYard', text: '«Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.»'}, {title: 'Отзыв от Университета им. Сеченова', text: '«Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.»'}]
+								.review__item
+									a(href="https://youtu.be/qBja7wZfJ8o").review__item-video.fancybox
+										img(src="img/photos/review-video.jpg", alt="")
+									.review__item-img
+										figure
+											img(src="img/photos/review-"+(i+1)+".png", alt="")
+									.review__item-info
+										.review__item-title=text.title
+										.review__item-text=text.text
+
+				.clients
+					.wrapper
+						.clients-cont
+							.clients-intro
+								.clients-title Клиенты
+								.clients-text Мы работаем с клиентами различных типов бизнеса, начиная от малых предприятий и заканчивая крупными международными компаниями
+								.clients__arrow
+									.swiper-button-prev
+									.swiper-button-next
+							.clients__list
+								.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="" )
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-10.png", alt="")
+												.clients__item-info
+													.clients__item-title Экран для Ледовой арены
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-11.png", alt="")
+												.clients__item-info
+													.clients__item-title Интерьерный экран. Горный университет (УГГУ)
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-12.png", alt="")
+												.clients__item-info
+													.clients__item-title Видеостена. ГУ МЧС России по Иркутской обл.
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-13.png", alt="")
+												.clients__item-info
+													.clients__item-title Видеостена. Налоговая
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-14.png", alt="")
+												.clients__item-info
+													.clients__item-title Экран для Ледовой арены
+													.clients__item-city г. Глазов
+
+				.contacts
+					.wrapper
+						.contacts-cont
+							.contacts__info
+								.contacts__info-text
+									.text-page
+										h6 Реклама на крыше здания
+										p Крышные установки это, пожалуй, самый массивный и значительный вид наружной рекламы. Внушительные размеры таких установок безусловно подчеркивают бренд и высокий статус компании. Установленные на значительной высоте, они видны с различных сторон за несколько километров.<br> Яркие и красочные буквы и логотипы, с подсветкой и объёмными изображениями ежедневно привлекают внимание людей и формируют положительный имидж рекламируемой компании.
+
+										h6 Преимущества
+										p Установка рекламы на крыше имеет массу достоинств. Индивидуальный подход к проектированию каждой установки. Такая реклама запоминается своей нестандартностью и несёт информацию о конкретном бренде. Большая площадь рекламного поля. Имея значительные габаритные размеры и находясь на крыше зданий, такая конструкция доминирует над остальными видами рекламы. Постоянно напоминает жителям города о статусе компании, поднимая её престиж. Существует два варианта изготовления рекламных устройств на крышах: плоские установки – наиболее простые в изготовлении, легко монтируются и имеют доступную цену.
+
+										h6 Преимущества
+										p Установка рекламы на крыше имеет массу достоинств. Индивидуальный подход к проектированию каждой установки. Такая реклама запоминается своей нестандартностью и несёт информацию о конкретном бренде. Большая площадь рекламного поля. Имея значительные габаритные размеры и находясь на крыше зданий, такая конструкция доминирует над остальными видами рекламы. Постоянно напоминает жителям города о статусе компании, поднимая её престиж. Существует два варианта изготовления рекламных устройств на крышах: плоские установки – наиболее простые в изготовлении, легко монтируются и имеют доступную цену.
+							.contacts__form
+								.contacts__title Связаться с нами
+								form(action="")
+									.forms-wrap
+										.forms__input-cont
+											input(required="" type="text").forms__input
+											label.forms__label Ваше имя:
+											.forms__error-message
+											i.forms__error-message-icon
+										.forms__input-cont
+											input(required="" type="text").forms__input
+											label.forms__label Ваш телефон:
+											.forms__error-message
+											i.forms__error-message-icon
+									.forms-submit-cont
+										input(type="submit" value="Отправить заявку").forms__submit
+									.forms-info Нажимая кнопку вы даете информированное согласие на <a href="#">обработку своих персональных данных</a>
+
+				.main-our-work
+					.main-our-work__cont
+						.main-our-work__info 
+							.main-our-work__arrow
+								.swiper-button-next
+								.swiper-button-prev
+							.main-our-work__title Наши<br> работы
+						.main-our-work__slider
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-2.jpg", alt="")
+											.main-our-work__item-text Премиум букмекерский<br> клуб OscarYard
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-3.jpg", alt="")
+											.main-our-work__item-text Видеостена для университета им. Сеченова
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+								.swiper-scrollbar
+
+		include inc/footer.pug
+		include inc/scripts.pug

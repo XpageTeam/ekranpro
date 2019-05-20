@@ -1,0 +1,146 @@
+.main-advantages
+
+	&__cont
+		padding-bottom: 70px
+
+	&__list
+		column-count: 2
+		column-gap: 55px
+		transition: transform 1s ease, opacity 1s ease
+
+		&:not(.animated)
+			opacity: 0
+			transform: translate3d(0,20%,0)
+			
+	&__item
+		position: relative
+		padding: 50px 62px 60px
+		border: 1px solid var(--borderColor)
+		margin-bottom: 28px
+
+		&-cont 
+			padding-top: 7px
+			break-inside: avoid
+			transition: transform 1s ease
+
+
+			&:hover
+				transform: translate3d(0,-10px,0) 
+
+
+
+			&:nth-child(1)
+				.main-advantages__item-title
+					background: url('../img/ico-a-1.svg') no-repeat left 0 center
+			&:nth-child(2)
+				.main-advantages__item-title
+					background: url('../img/ico-a-2.svg') no-repeat left 0 center
+			&:nth-child(3)
+				.main-advantages__item-title
+					background: url('../img/ico-a-3.svg') no-repeat left 0 center
+			&:nth-child(4)
+				.main-advantages__item-title
+					background: url('../img/ico-a-4.svg') no-repeat left 0 center
+
+
+
+		&:before
+			content: ''
+			position: absolute
+			left: -7px
+			top: -7px
+			display: block
+			size: 14px
+			border-radius: 50%
+			background: var(--mainColor)
+			z-index: 10
+			break-inside: avoid-column
+
+		&:after
+			content: ''
+			size: 6px 90px
+			background: #fff
+			position: absolute
+			left: -3px
+			top: 0
+			z-index: 5
+			display: block
+
+		&-title
+			position: relative
+			
+			font-size: rem(16)
+			font-family: "Montserrat" 
+			font-weight: 300
+			padding: 13px 30px 0px 65px
+			margin-bottom: 35px
+
+			// &:after
+			// 	content: ''
+			// 	position: absolute
+			// 	right: 0
+			// 	top: 22px
+			// 	size: 10px 2px
+			// 	background: var(--mainColor)
+			// 	display: block
+				
+
+@media screen and (max-width: 1600px)
+	.main-advantages__item
+		padding: 30px 50px 45px
+
+
+@media screen and (max-width: 1440px)
+
+	.main-advantages
+		&__item
+			padding: 25px 30px 30px
+			&-title
+				margin-bottom: 20px
+
+		&__cont
+			padding-bottom: 45px
+
+@media screen and (max-width: 1300px)
+	
+	.main-advantages
+		&__list
+			column-gap: 25px
+
+@media screen and (max-width: 1200px)
+
+	.main-advantages
+		&__item 
+			padding: 1.4rem
+
+			&-title
+				margin-bottom: 15px
+				padding: 13px 30px 0px 45px
+
+		&__cont
+			padding-bottom: 30px
+
+
+
+@media screen and (max-width: 1000px)
+
+	.main-advantages__list
+		column-count: 1
+
+
+@media screen and (max-width: 660px)
+
+	.main-advantages
+		&__item
+			margin-bottom: 1.4rem
+			&-title
+				padding: 13px 0 0px 45px
+				&:after
+					display: none
+
+
+
+
+
+				
+

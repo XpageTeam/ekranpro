@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title 404
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.page-error
+		include inc/header.pug
+		
+		main#content
+			.content
+				.error-cont
+					.wrapper 
+						.error
+							.error-num 404
+							.error-info
+								.error-info__top Ой!
+								.error-info__text Похоже, мы не можем найти<br> нужную вам страницу!
+								.error-info__link
+									a(href="#") Вернуться назад
+
+		include inc/footer.pug
+		include inc/scripts.pug

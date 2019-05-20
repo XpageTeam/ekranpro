@@ -1,0 +1,65 @@
+.footer
+	padding: 50px 0
+
+	&__cont
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__copy
+		font-size: rem(14)
+		font-family: "Montserrat"
+		color: #a3a3a3
+
+	&__devaloper
+		max-width: 235px 
+		display: flex 
+		flex: 1 1 auto
+		justify-content: flex-end
+
+	&__soc 
+		justify-content: center
+
+
+.developer
+
+	&__img
+		display: flex
+			
+		svg 
+			color: #dbdbdb
+
+.soc__link
+
+	span
+		display: flex 
+		justify-content: center
+		align-items: center
+
+	svg 
+		color: #a0a0a0
+		transition: color .3s ease
+
+	&:hover
+		svg 
+			color: var(--mainColor)
+
+
+@media screen and (max-width: 1440px)
+
+	.footer
+		padding: 30px 0
+
+
+@media screen and (max-width: 660px)
+	
+	.footer
+		padding: 1.4rem 0
+
+		&__cont
+			flex-direction: column
+
+			> *
+				&:not(:first-child)
+					margin-top: 15px
+

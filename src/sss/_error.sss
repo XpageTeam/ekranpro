@@ -1,0 +1,65 @@
+.page-error
+
+	.content
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: 100%
+		height: calc(100vh - 135px)
+
+	.logo
+		&-left
+			color: var(--mainColor)
+		&-top 
+			color: #C13333
+
+		&-right
+			color: #68AC64
+		&-bot
+			color: #D57730
+
+		&-text
+			&-first, &-last
+				color: #000
+
+
+
+.error
+	display: flex
+	margin-top: 130px
+
+	&-num
+		font-size: rem(272)
+		font-weight: 300
+		font-family: "Montserrat"
+		margin-right: 145px
+
+	&-info
+		display: flex
+		flex-direction: column 
+		justify-content: center 
+
+		font-family: "Montserrat"
+		font-size: rem(20)
+		font-weight: 300
+
+		&__top
+			margin-bottom: 20px
+
+		&__link
+			a 
+				position: relative
+				font-size: rem(15)
+				align-items: center
+				display: flex
+				margin-top: 40px
+				
+				&:before 
+					content: ''
+					display: inline-block
+					size: 40px
+					border-radius: 50% 
+					background: url('../img/ico-arrow-w.svg') no-repeat center, var(--mainColor)
+					margin-right: 20px
+					
+

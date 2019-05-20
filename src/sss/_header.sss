@@ -1,0 +1,190 @@
+.head
+	position: relative
+	z-index: 10
+	padding: 40px 0 50px
+
+	&-cont
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&-logo
+		flex: none
+		z-index: 10
+		margin-right: 190px
+
+		svg
+			display: block
+
+
+	&-phone
+		margin: 0 rem(60) 0 auto
+
+		a
+			position: relative
+			font-size: rem(18)
+			display: flex
+			align-items: center
+
+			&:before
+				content: ''
+				display: inline-block
+				margin-right: 20px
+				size: 21px
+				background: url('../img/ico-phone.png') no-repeat center
+
+
+
+	&-link
+		background: url('../img/ico-header-1.svg') no-repeat left 0 center
+		background-size: 17px
+
+		a
+			display: block
+			padding: 5px 0 5px 35px
+			font-family: "Montserrat"
+			font-weight: 300
+
+		/* &:not(:first-child)
+			margin-left: rem(120) */
+
+.wr-head-link
+	display: flex
+	flex-direction: column
+
+.logo
+	display: block
+
+	img
+		display: block
+
+.inner
+	.head
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+
+
+	.logo
+		&-left
+			color: #fff
+		&-top
+			color: #fff
+
+		&-right
+			color: #fff
+		&-bot
+			color: #fff
+
+		&-text
+			&-first, &-last
+				color: #fff
+
+	&.page-contacts, &.page-about
+
+		.logo
+			&-left
+				color: var(--mainColor)
+			&-top
+				color: #C13333
+
+			&-right
+				color: #68AC64
+			&-bot
+				color: #D57730
+
+			&-text
+				&-first, &-last
+					color: #000
+
+
+.main
+	.logo
+		&-left
+			color: var(--mainColor)
+		&-top
+			color: #C13333
+
+		&-right
+			color: #68AC64
+		&-bot
+			color: #D57730
+
+		&-text
+			&-first, &-last
+				color: #000
+.page-catalog:not(.page-portfolio), .page-project
+	.logo
+		&-1
+			display: none
+		&-2
+			display: block !important
+
+
+@media screen and (min-width: 1200px)
+	.burger 
+		display: none !important
+
+@media screen and (max-width: 1600px)
+	.head
+		padding: 40px 0 50px
+
+@media screen and (max-width: 1500px)
+
+	.head-logo
+		margin-right: 65px
+
+
+@media screen and (max-width: 1400px)
+
+	.head
+		padding: 35px 0
+
+
+
+@media screen and (max-width: 1200px)
+	.nav
+		display: none
+
+	.head
+
+		&-logo
+			margin-right: 40px
+
+		&-cont
+			flex-wrap: wrap
+
+
+
+
+@media screen and (max-width: 660px)
+
+	.main
+		.head
+			background: #fff
+
+	.head
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 0.4rem 0
+
+
+		&-phone
+			display: none
+
+
+
+	.wr-head-link
+		flex-direction: column
+
+
+	.inner .head-logo
+		margin-right: 0
+
+	.logo 
+		img
+			max-width: 95px
+

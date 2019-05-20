@@ -1,0 +1,166 @@
+.history
+	padding: 96px 0 120px
+
+	&-cont
+		display: flex
+
+	&-num
+		display: flex
+		flex: 1 1 auto
+		justify-content: center
+		padding-top: 115px
+
+		&__list
+
+		&__item 
+			text-align: center
+
+			&:not(:first-child)
+				margin-top: 27px
+
+			span
+				font-size: rem(14)
+				color: rgba(0, 0, 0, 0.5)
+				line-height: 1
+				text-transform: uppercase
+				
+
+			div
+				font-weight: 500
+				color: var(--mainColor)
+				font-size: rem(40)
+
+	&-stage
+		width: calc(100% - 320px)
+		padding-left: 60px
+
+
+
+		&__item
+			position: relative
+			
+			display: flex
+			align-items: center
+			border-top: 1px solid var(--borderColor)
+			padding: 25px 50px 25px 30px
+
+			&:last-child
+				border-bottom: 1px solid var(--borderColor)
+
+
+			&:after 
+				content: ''
+				position: absolute
+				right: 31px
+				top: calc(50% - 3px)
+				size: 6px
+				border-radius: 50%
+				background: var(--mainColor)
+				display: block
+
+			&-text
+				transition: transform .3s ease
+
+				
+			&:hover
+				.history-stage__item-text
+					transform: translateX(20px)
+
+
+		&__title
+			font-family: "GothamPro"
+			font-size: rem(30)
+			padding-bottom: 35px
+
+		&__year
+			font-size: rem(20)
+			padding-right: 70px
+
+
+@media screen and (max-width: 1300px)
+
+	.history
+		padding: 70px 0
+
+	.history-stage
+		width: calc(100% - 240px)
+		padding-left: 35px
+
+
+
+@media screen and (max-width: 1200px)
+
+	.history-stage
+		width: calc(100% - 185px)
+		padding-left: 35px
+
+	.history-num__list
+
+		.history-num__item:not(:first-child) 
+			margin-top: 13px
+
+
+			
+
+@media screen and (max-width: 1000px)
+
+	.history
+		padding: 35px 0
+
+		&-num
+			padding-top: 66px
+
+
+		&-stage
+			width: calc(100% - 135px)
+			padding-left: 25px
+
+			&__title
+				padding-bottom: 15px
+
+			&__item
+				padding: 20px 25px 20px 10px
+
+				&:after
+					right: 11px
+
+			&__year
+				padding-right: 25px
+
+@media screen and (max-width: 660px)
+	
+	.history
+		&-cont
+			flex-direction: column
+
+		&-num
+			padding-top: 0
+
+			&__list
+				display: flex
+				width: 100%
+				justify-content: space-around
+
+				.history-num__item
+					margin-top: 0 !important
+					display: flex 
+					flex-direction: column-reverse
+					div
+						font-size: 2rem
+						line-height: 1
+
+					span 
+						margin-top: 10px
+
+		&-stage
+			width: 100%
+			padding-left: 0
+			margin-top: 20px
+
+			&__item
+				flex-direction: column
+				align-items: flex-start
+				padding: 20px 0
+				&:after
+					display: none
+				

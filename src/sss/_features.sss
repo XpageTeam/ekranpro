@@ -1,0 +1,112 @@
+.features
+	background: var(--secondColor)
+	padding: 90px 0 105px
+	font-family: "Montserrat"
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -40px -40px
+
+	&__item
+		position: relative
+		display: flex 
+		flex-direction: column
+		flex: 1 1 auto
+		
+		padding: 60px 70px 102px 70px
+		background: #fff
+		width: calc((100% - 40px * 4) / 4)
+		margin: 0 0 40px 40px
+
+		&:after 
+			content: ''
+			position: absolute
+			bottom: 60px
+			left: 68px
+			display: block
+			background: var(--mainColor)
+			size: 10px 2px
+
+		&-img
+			margin-bottom: 35px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			flex: 1 1 auto
+
+		&-title
+			margin-top: auto
+
+@media screen and (max-width: 1600px)
+
+	.features
+		padding: 75px 0 90px
+
+@media screen and (max-width: 1500px)
+	.features
+		padding: 75px 0
+
+
+@media screen and (max-width: 1400px)
+
+	.features
+		&__list 
+			margin: 0 0 -40px -25px
+			
+		&__item
+			width: calc((100% - 25px * 4) / 4)
+			margin: 0 0 40px 25px
+			padding: 50px 50px 75px 65px
+
+			&:after
+				bottom: 30px	
+
+
+@media screen and (max-width: 1200px)
+
+	.features
+		&__item
+			width: calc((100% - 25px * 4) / 4)
+			margin: 0 0 40px 25px
+			padding: 30px 30px 40px
+
+			&-img
+				margin-bottom: 25px
+
+			&:after
+				bottom: 20px
+				left: 35px
+
+
+@media screen and (max-width: 1000px)
+	.features
+		padding: 30px 0
+
+
+		&__item
+			width: calc((100% - 25px * 2) / 2)
+			margin: 0 0 40px 25px
+			padding: 30px 30px 40px
+
+
+@media screen and (max-width: 660px)
+
+	.features
+		&__item
+			width: 100%
+			margin: 0 0 1.4rem 25px
+			flex-direction: row
+			padding: 1.4rem
+
+			&-img
+				margin-bottom: 0
+				margin-right: 15px
+				max-width: 100px
+
+			&-title
+				margin: auto 0
+
+
+			&:after 
+				display: none

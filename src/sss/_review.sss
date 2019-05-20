@@ -1,0 +1,93 @@
+.review
+	background: var(--secondColor)
+	padding-bottom: 110px
+
+	&__item
+		display: flex
+		align-items: center
+		border: 1px solid var(--borderColor)
+
+		&:not(:first-child)
+			margin-top: 55px
+
+		img 
+			display: block
+			
+
+		&-video
+			flex: none
+
+		&-img
+			margin: -1px 0 -1px -1px
+			flex: none
+			padding: 1.4rem 68px
+
+
+		&-info
+			padding: 1.4rem 140px 1.4rem 0
+
+		&-title
+			font-size: rem(30)
+			font-family: "Montserrat"
+			font-weight: 300
+			line-height: 1
+			margin-bottom: 25px
+
+@media screen and (max-width: 1600px)
+
+	.review
+		padding-bottom: 90px
+
+@media screen and (max-width: 1400px)
+
+	.review
+		padding-bottom: 75px
+
+		&__item-info
+			padding: 1.4rem 35px 1.4rem 0
+
+			
+@media screen and (max-width: 1200px)
+
+	.review
+		&__item
+			&-title
+				margin-bottom: 15px
+				font-size: 1.5rem
+			&-img
+				padding: 1.4rem 30px
+
+			&-video
+				max-width: 330px
+
+			&:not(:first-child)
+				margin-top: 35px
+
+
+@media screen and (max-width: 1000px)
+
+	.review
+		padding-bottom: 30px
+		
+		&__item
+			flex-wrap: wrap
+
+			&-info
+				width: 100%
+				padding: 1.4rem
+
+
+@media screen and (max-width: 660px)
+
+	.review__item
+		&-title
+			font-size: 1.3rem
+
+		&-img
+			margin: 0
+			padding: 1.4rem 1.4rem 0
+
+		&-video
+			max-width: 100%
+
+

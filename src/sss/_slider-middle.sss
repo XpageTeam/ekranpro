@@ -1,0 +1,165 @@
+.slider-middle
+	position: relative
+	font-family: "Montserrat"
+	font-weight: 300
+
+	img 
+		display: block
+		width: 100%
+
+	.swiper-slide:not(.swiper-slide-active)
+		opacity: 0 !important
+		
+
+
+	&__info
+		position: absolute
+		top: 95px
+		bottom: 135px
+		left: rem(207)
+		width: 430px
+		background: #fff
+		padding: 90px 85px 90px 75px
+		display: flex 
+		flex-direction: column
+		justify-content: flex-end
+
+
+	&__title 
+		font-size: rem(30)
+		line-height: 1.2
+
+
+	&__text 
+		margin-top: 55px
+
+	&__arrow
+		position: absolute
+		top: 155px
+		left: rem(250)
+		display: flex
+		flex-direction: row-reverse
+
+
+
+	.swiper
+		&-button
+			position: absolute
+			top: 0
+			right: 0
+
+			&-prev, &-next
+				position: relative
+				z-index: 15
+				margin: 0
+				size: 65px 60px
+				background: transparent
+				flex: none
+
+				&:before 
+					content: ''
+					position: absolute
+					display: block
+					top: calc(50% - 5px)
+					left: calc(50% - 5px)
+					size: 10px 
+					border-top: 1px solid #000
+					border-right: 1px solid #000
+
+			&-next
+				right: 0
+
+				&:before 
+					transform: rotate(45deg)
+
+			&-prev
+				left: 0
+				&:before 
+					transform: rotate(-135deg)
+					left: calc(50% - -1px)
+
+
+@media screen and (max-width: 1500px)
+
+	.slider-middle__info
+		top: 65px
+		bottom: 105px
+
+	.slider-middle__arrow
+		top: 80px
+
+	.slider-middle__text
+		margin-top: 20px
+
+
+@media screen and (max-width: 1400px)
+	
+	body[class*='color-'] 
+		.main-banner-inner:before
+			width: 225px
+
+
+@media screen and (max-width: 1300px)
+
+	.slider-middle__info
+		left: 1.4rem
+		width: 330px
+		padding: 60px 70px 30px 50px
+
+	.slider-middle__title
+		font-size: 1.5rem
+
+	.slider-middle__arrow
+		left: 2.625rem
+
+
+@media screen and (max-width: 1200px)
+
+
+
+	.slider-middle__info
+		top: 1.4rem
+		bottom: 1.4rem
+
+	.slider-middle__arrow
+		top: 22px
+
+
+@media screen and (max-width: 1000px)
+
+	.slider-middle__item
+
+		img 
+			height: 500px
+			width: 100%
+			object-fit: cover 
+			object-position: center
+
+
+@media screen and (max-width: 660px)
+
+	.slider-middle__info
+		position: relative
+		top: initial 
+		left: initial
+		bottom: initial
+		padding: 1.4rem
+		min-width: 100%
+
+	.slider-middle__arrow
+		display: flex
+		flex-direction: row-reverse
+		left: initial
+		top: initial 
+		right: 0
+		bottom: initial
+
+	.slider-middle__title
+		max-width: 245px
+
+
+	.slider-middle__item
+
+		img 
+			height: auto
+		

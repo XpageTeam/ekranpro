@@ -1,0 +1,696 @@
+.main-services
+	position: relative
+	max-width: 1920px
+	margin: 0 auto
+
+
+	img 
+		display: block
+		
+
+	> .wrapper
+		position: absolute
+		top: 180px
+		left: 0
+		right: 0
+		width: 100% 
+		z-index: 3
+
+
+	.swiper-slide
+		// opacity: 1 !important
+
+
+
+
+		.main-services__img, .main-services__info
+			opacity: 1
+			transition: opacity .4s ease
+
+		&-duplicate-active, &-active
+
+			.main-services__img, .main-services__info
+				opacity: 1
+
+		&-next
+			.main-services__img
+				position: relative
+				transform: translateX(-300px)
+				transition: opacity .4s ease, transform 1s ease
+
+				// &:before 
+				// 	content: ''
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	size: 100%
+				// 	display: block
+				// 	background: #fff
+
+
+	&__cont
+
+		.swiper-slide-active, .swiper-slide-duplicate-active
+			.blue, .green
+				&:before 
+					transform: translate3d(0,0,0) !important
+					transition-delay: .6s
+			.red, .orange
+				&:before 
+					transform: translate3d(0,0,0) !important
+					transition-delay: .6s
+
+
+	.swiper-slide
+		// &-prev
+			
+		// 	.blue
+		// 		&:before
+		// 			transform: translate3d(0,-100%,0)
+		// 	.green
+		// 		&:before
+		// 			transform: translate3d(0,100%,0)
+		// 	.red
+		// 		&:before
+		// 			transform: translate3d(100%,0,0)
+		// 	.orange
+		// 		&:before
+		// 			transform: translate3d(-100%,0,0)
+
+		// &-active
+		// 	.blue
+		// 		&:before
+		// 			transform: translate3d(0,0,0)
+
+		// 	.green
+		// 		&:before
+		// 			transform: translate3d(0,0,0)
+
+		// 	.red
+		// 		&:before
+		// 			transform: translate3d(0,0,0)
+
+		// 	.orange
+		// 		&:before
+		// 			transform: translate3d(0,0,0)
+		// &-next
+		// 	.blue
+		// 		&:before
+		// 			transform: translate3d(0,100%,0)
+		// 	.green
+		// 		&:before
+		// 			transform: translate3d(0,-100%,0)
+
+		// 	.red
+		// 		&:before
+		// 			transform: translate3d(-100%,0,0)
+		// 	.orange
+		// 		&:before
+		// 			transform: translate3d(100%,0,0)
+
+		&.js__active
+
+			// .main-services__info-title
+			// 	transform: translate3d(0,0,0)!important
+			// 	opacity: 1
+
+			// 	span
+			// 		transform: translate3d(0,0,0)!important
+			// 		opacity: 1
+
+			// 	div
+			// 		opacity: 1
+
+
+
+
+
+
+	&__slide
+
+
+		&-wr
+			position: relative
+			display: flex
+			padding: 230px 0 204px 207px
+			background: var(--secondColor)
+
+			&.blue
+
+				&:before 
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					display: block
+					height: 100% 
+					width: 370px
+					background: var(--mainColor)
+					z-index: 1
+					// transform: translate3d(0,-100%,0)
+					transition: transform .4s ease
+					transition-delay: .05s
+
+			&.red
+				&:before 
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					display: block
+					height: 480px 
+					width: 100%
+					background: #d73e3e
+					z-index: 1
+					// transform: translate3d(-100%,0,0)
+					transition: transform .4s ease
+					transition-delay: .05s
+
+			&.green
+				&:before 
+					content: ''
+					position: absolute
+					right: 0
+					top: 0
+					display: block
+					height: 100%
+					width: 370px
+					background: #68ac64
+					z-index: 1
+					// transform: translate3d(0,100%,0)
+					transition: transform .4s ease
+					transition-delay: .05s
+
+
+
+			&.orange
+				&:before 
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					display: block
+					height: 460px
+					width: 100%
+					background: #e58135
+					z-index: 1
+					// transform: translate3d(100%,0,0)
+					transition: transform .4s ease
+					transition-delay: .05s
+
+
+	&__img, &__info
+		position: relative
+		z-index: 2
+
+	&__img 
+		margin-right: rem(95)
+
+
+
+	&__info
+		font-family: "Montserrat"
+		font-weight: 300
+		max-width: 521px
+		display: flex 
+		flex-direction: column
+
+		&-title
+			font-size: rem(40)
+			margin-top: auto
+			line-height: 1
+			// transition: transform .7s ease
+
+			// div
+			// 	opacity: 0
+			// 	transition: transform .7s ease
+
+			// span 
+			// 	transition: transform .7s ease
+
+
+
+
+		&-text 
+			font-size: rem(14)
+			margin-top: 30px		
+
+	&__title
+		color: #fff
+		font-size: rem(30)
+		letter-spacing: .06em
+		line-height: 1
+
+
+		
+
+	&__nav
+		position: absolute
+		// top: 90px
+		top: 216px
+		right: 178px
+		display: flex 
+		// flex-direction: column-reverse
+
+
+	&__pagination
+		position: absolute
+		bottom: 205px
+		right: 217px
+
+		.line
+			position: relative
+			width: 20px
+			margin: 0 20px 3px
+			
+			&:before 
+				content: ''
+				position: absolute
+				top: 50%
+				left: 0
+				display: block
+				width: 20px
+				height: 1px
+				background: #000
+
+
+	.swiper
+		&-button
+			position: absolute
+			top: 0
+			right: 0
+
+			&-prev, &-next
+				position: relative
+				z-index: 15
+				margin: 0
+				size: 65px 53px
+				background: transparent
+				flex: none
+
+				&:before 
+					content: ''
+					position: absolute
+					display: block
+					top: calc(50% - 5px)
+					left: calc(50% - 5px)
+					size: 10px 
+					border-top: 1px solid #000
+					border-right: 1px solid #000
+
+			&-next
+				right: 0
+
+				&:before 
+					transform: rotate(45deg)
+
+			&-prev
+				left: 0
+				&:before 
+					transform: rotate(-135deg)
+					left: calc(50% - -1px)
+		&-pagination
+			position: relative
+			display: flex
+			align-items: flex-end
+			bottom: initial
+			// width: 53px
+
+			div 
+				line-height: 1
+				font-size: rem(14)
+				font-family: "Montserrat"
+				font-weight: 300
+
+
+	// .swiper-slide
+
+	// 	&.js__active
+
+	// 		.main-services__info-title
+	// 			transform: translate3d(0,0,0)!important
+	// 			opacity: 1
+
+	// 			span
+	// 				transform: translate3d(0,0,0)!important
+	// 				opacity: 1
+
+	// 			div
+	// 				transform: translate3d(0,0,0)!important
+	// 				opacity: 1
+
+
+
+	// &__info-title
+	// 	transition: transform .7s ease
+
+	// 	div
+	// 		opacity: 0
+	// 		transition: transform .7s ease
+
+	// 	span 
+	// 		transition: transform .7s ease
+	// 		opacity: 0
+
+
+
+.js__color-black
+	.main-services__title
+		color: #000
+
+.js__color--red
+	.swiper
+		&-button
+
+			&-prev, &-next
+
+				&:before
+					border-color: #fff
+
+
+
+
+@media screen and (max-width: 1600px)
+
+	.main-services
+		&.js__color--red
+			.main-services__info-title
+				color: #fff
+
+		&__slide-wr
+			padding: 110px 0 110px 55px
+
+			&.red:before
+				height: 215px
+
+			&.orange:before
+				height: 360px
+
+
+		.swiper-slide-next 
+			.main-services__img
+				transform: translateX(-150px)
+
+		&__nav
+			right: 195px
+			top: 90px
+			flex-direction: row
+
+		> .wrapper
+			top: 50px
+			padding: 0 55px
+
+		&__pagination
+			bottom: 110px
+
+		&.green:before
+			width: 170px
+
+		&__info-title 
+			font-size: 2.375rem
+
+		&__img
+			max-width: 500px
+			margin-right: 2.9375rem
+
+
+
+@media screen and (max-width: 1440px)
+	
+	.main-services
+		&__nav
+			right: 115px
+			top: 76px
+			flex-direction: row
+
+
+		&__pagination
+			right: 140px
+
+		&__slide-wr
+			padding: 110px 0 110px 32px
+
+
+		.swiper-slide-next 
+			.main-services__img
+				transform: translateX(-115px)
+
+		&__slide-wr 
+			padding: 95px 0 70px 1.4rem
+
+		> .wrapper 
+			top: 50px
+			padding: 0 1.4rem
+
+		&__pagination 
+			bottom: 70px
+
+		&__info-title
+			font-size: 3rem
+
+		&__info-text
+			margin-top: 0
+
+		&__img 
+			margin-right: 2.9375rem
+			max-width: 500px
+
+		&__slide-wr
+			&.blue:before
+				width: 255px
+
+			&.red:before
+				height: 210px
+
+			&.green:before
+				width: 265px
+
+			&.orange:before
+				height: 305px
+
+
+@media screen and (max-width: 1400px)
+	
+	.main-services
+		&__img
+			margin-right: 30px
+			max-width: 430px
+
+
+		&__info-title
+			font-size: 2.5rem
+
+		&__slide-wr
+			&.blue
+				&:before
+					width: 280px
+
+			&.green:before
+				width: 305px
+
+			&.red:before 
+				height: 188px
+
+		&__nav
+			top: 77px
+			// right: calc(100% / 1.92)
+
+
+@media screen and (max-width: 1300px)
+
+	.main-services
+		&__nav
+
+
+		&__slide-wr
+			&.red:before
+				height: 245px
+
+			&.orange:before
+				height: 325px
+
+
+			&.green:before
+				width: 250px
+
+		.swiper-slide-next .main-services__img
+			transform: none
+
+
+@media screen and (max-width: 1200px)
+
+	.main-services
+		&__slide-wr
+			padding: 80px 0 70px 24px
+
+		> .wrapper
+			top: 35px
+
+		&__img
+			margin-right: 35px
+			max-width: 415px
+
+		&__info
+			&-title
+				font-size: 2rem
+
+		&__nav
+			top: 25px
+			right: 45px
+			flex-direction: row
+
+		&__title
+			color: #000
+
+		// .swiper-slide-next .main-services__img
+		// 	transform: translateX(-70px)
+
+		&__slide-wr
+			&:before 
+				display: none !important
+
+			&.red:before
+				height: 160px
+
+			&.green:before
+				width: 85px
+
+			&.blue:before 
+				width: 205px
+
+	.main-services__info-text
+		margin-top: 5px
+
+
+		
+
+	.main-services__pagination
+		bottom: 40px
+		right: 70px
+
+
+
+@media screen and (max-width: 1000px)
+
+	.main-services 
+		.swiper-slide-next .main-services__img
+			transform: none
+
+		&__nav
+			right: 8px
+			top: 40px
+
+		.swiper-button
+			&-prev, &-next
+				height: 35px
+
+		&__pagination
+			right: 2rem
+			bottom: 1.4rem
+
+		&__img
+			max-width: 335px
+
+		&__slide-wr
+			&.red, &.orange, &.green
+				&:before
+					height: 100%
+					left: 0
+					top: 0
+					right: initial
+					bottom: initial
+					width: 205px
+
+
+
+
+@media screen and (max-width: 660px)
+
+	.main-services
+
+
+		&__slide-wr
+			padding: 1.4rem 1.4rem 3rem 1.4rem
+			flex-direction: column
+
+			&:before
+				width: 100% !important
+
+			&.blue
+				background: var(--mainColor)
+				> *, a
+					color: #fff !important
+
+			&.red
+				background: #C13333
+				> *, a
+					color: #fff !important
+
+			&.green
+				background: #68AC64
+				> *, a
+					color: #fff !important
+			
+			&.orange
+				background: #D57730
+
+				> *, a
+					color: #fff !important
+
+		.swiper-pagination
+			color: #fff
+
+		&__pagination .line:before
+			background: #fff
+
+		> .wrapper
+			position: relative
+			top: 0
+
+		&__title
+			color: #000
+			font-size: 1.5rem
+			margin-bottom: 10px
+			text-transform: none
+
+		&__nav
+			flex-direction: row
+			top: -5px
+
+		&__img
+			max-width: 100%
+			margin: 0 0 20px 0
+
+		&__pagination
+			right: 1.4rem
+			bottom: 1rem
+
+
+
+		&__info-text
+			margin-top: 15px
+
+
+
+			
+
+@media screen and (max-width: 370px)
+	
+	.main-services__info-title
+		font-size: 1.4rem
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

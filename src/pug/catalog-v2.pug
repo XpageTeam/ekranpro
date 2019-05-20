@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог v2
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.page-catalog
+		include inc/header-v2.pug
+
+		main#content
+			.content
+				.catalog-cont
+					.wrapper
+						.catalog
+							.catalog__list
+								each title, i in ['Торговый центр «Метрополис»', 'Премиум букмекерский клуб OscarYard', 'Видеостена для университета им. Сеченова', 'Интерьерный экран. Налоговая', 'Видеостена. ГУ МЧС России по Иркутской обл.', 'Интерьерный экран. Фитнес-клуб', 'Торговый центр «Метрополис']
+									a(href="#").catalog__item
+										figure.catalog__item-img
+											img(src="img/photos/portfolio-img-2.jpg", alt="")
+										.catalog__item-info
+											.catalog__item-razdel.color-blue LCD панели и видеостены
+											.catalog__item-title=title
+											.catalog__item-text Монтажные работы происходили в сжатые сроки и только в ночное время. 
+											
+							include inc/paginator.pug
+
+		include inc/footer.pug
+		include inc/scripts.pug

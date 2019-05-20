@@ -1,0 +1,272 @@
+.main-banner
+	position: relative
+	margin-bottom: 145px
+
+	.wrapper
+		position: relative
+		
+	
+	&__cont
+		position: relative
+		display: flex
+
+	&__img
+		position: relative
+		margin-left: auto
+		// transform: translateX(0)
+		transition: opacity .2s ease
+		will-change: transform
+		transition-delay: .5s
+		animation: slider-animate  2s ease forwards
+		// max-width: 1263px
+		// max-height: 670px
+		// width: 100%
+		// height: 100%
+		padding-top: 48%
+		overflow: hidden
+
+		width: 65vw
+		height: 75vh
+		background-color: #242C3D
+
+		// &:before 
+		// 	content: ""
+		// 	display: block
+		// 	width: 100%
+		// 	padding-top: 56.25%
+
+		video
+			// width: 100%
+			// height: 100%
+			// display: block
+			// // max-height: 670px
+			// position: absolute
+			// bottom: 0
+			// left: 0
+
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 110%
+			height: 110%
+			border-bottom: 1px solid transparent
+			transform: translate3d(-50%,-50%,0)
+			object-fit: cover
+
+
+		img 
+			display: block
+			object-fit: cover 
+			object-position: center
+			display: block
+
+
+	&__info
+		position: absolute
+		z-index: 1
+		bottom: 45px
+		left: 22px
+
+	&__title
+		pointer-events: none
+		font-family: 'Firasansmedium'
+		font-weight: 500
+		text-transform: uppercase
+		line-height: 1.6
+		padding: 12px 0 10px
+		// background: var(--mainColor)
+		color: #fff
+		font-size: rem(52)
+		// box-shadow: 19px 0 0 var(--mainColor), -21px 0 0 var(--mainColor)
+		letter-spacing: .04em
+
+		display: flex 
+		flex-direction: column
+		align-items: flex-start
+
+
+
+
+		.line
+			display: flex
+			background: var(--mainColor)
+			line-height: 1
+			padding: 10px 20px 5px
+			transition: transform 1s ease
+			display: flex
+
+			&:not(:first-child)
+				margin-top: 20px
+
+
+	.char
+		opacity: 1
+		transition: transform .3s ease
+		overflow: hidden
+		max-width: 45px
+
+		span
+			display: inline-block
+			transition: transform .5s ease
+			
+
+
+	
+.loading
+	.main-banner
+		&__img
+			opacity: 0
+
+
+
+
+
+
+@keyframes slider-animate
+	from
+		transform: translateX(-20%)
+	to
+		transform: translateX(0)
+
+
+.scroll
+	display: flex
+	align-items: center
+	line-height: 1
+	font-size: rem(12)
+	cursor: pointer
+	letter-spacing: .02em
+	writing-mode: vertical-lr
+
+	&:before
+		content: ''
+		display: block
+		size: 1px 80px
+		background: #000
+		margin-bottom: 35px
+
+	&-wr
+		position: absolute
+		left: -75px
+		bottom: 0
+		// top: calc(100% - 150px)
+		transform: rotate(180deg)
+
+
+.socials
+	position: absolute
+	right: -75px
+	bottom: 0
+	transform: rotate(180deg)
+	
+
+	&__item
+		line-height: 1
+
+		a
+			writing-mode: vertical-lr
+			transition: color .3s ease
+
+			&:hover 
+				color: #929292
+
+		&:not(:first-child)
+			margin-top: 30px
+
+
+
+@media screen and (max-width: 1600px)
+
+	.main-banner
+		margin-bottom: 70px
+
+		// &__img
+		// 	max-width: 70%
+@media screen and (max-width: 1500px)
+
+	.scroll-wr
+		display: none
+
+
+@media screen and (max-width: 1400px)
+
+	// .main-banner__img
+	// 	max-width: 65%
+
+@media screen and (max-width: 1200px)
+
+	.main-banner
+		margin-bottom: 45px
+		
+		&__info
+			bottom: 20px
+
+		&__title
+			line-height: 1.9
+			font-size: 2.25rem
+		
+@media screen and (max-width: 1000px)
+
+	// .main-banner__img
+	// 	max-width: 90%
+
+
+@media screen and (max-width: 660px)
+
+
+
+	.main-banner
+		margin-top: 20px
+
+
+		
+		&__info
+			// position: relative
+			bottom: 0
+			left: 9px
+
+		&__cont
+			flex-direction: column
+
+		&__img
+			margin-top: 0
+			padding-top: 0
+			width: 100vh
+			height: calc(100vh - 70px)
+			margin: -1.4rem -1.4rem 0 -1.4rem
+
+			&:before 
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: #000
+				background: rgba(0, 0, 0, 0.25)
+				z-index: 10
+
+
+		&__title
+			padding: 8px 0 4px
+			font-size: 1.7rem
+			box-shadow: none
+
+			.line
+				padding: 10px 10px 5px
+
+		&__info
+			left: 0
+			bottom: 1.4rem
+
+		&__title .line:not(:first-child)
+			margin-top: 5px
+
+
+
+@media screen and (max-width: 370px)
+
+	.main-banner
+		&__title
+			font-size: 1.4rem

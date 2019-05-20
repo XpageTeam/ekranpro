@@ -1,0 +1,351 @@
+.about
+	&-map
+		background: var(--secondColor)
+		text-align: center
+		padding: 100px 0 65px
+
+		&-wr
+			position: relative
+
+		&__title
+			text-align: left
+			font-family: "GothamPro"
+			font-size: 1.875rem
+			padding-bottom: 35px
+
+
+	&__map
+
+		&-el
+			position: absolute
+			display: flex
+
+			&.active
+
+				.about__map-city
+					display: block
+
+				.row 
+					> div 
+						background: #e3e2e6
+
+			&.js__hover
+
+				.about__map-img
+					opacity: 1
+
+					&-wr
+						opacity: 1
+						pointer-events: all
+
+				.about__map-city
+					display: block
+
+				
+
+
+
+
+
+			&:hover 
+				z-index: 100
+
+				.about__map
+					&-city, &-img
+						display: block
+
+				.row 
+					> div 
+						background: #e3e2e6
+
+
+
+		&-info
+			opacity: 0
+			pointer-events: none
+			position: absolute
+			width: 0
+			background: #fff
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 5px
+			border: 1px solid var(--border-color)
+
+				// opacity: 1
+				// pointer-events: all
+				// position: relative
+				// width: auto
+				// z-index: 10
+
+
+		&-marker
+			display: flex
+			align-items: flex-start
+			flex-direction: column-reverse
+			line-height: 1
+			// padding-top: 30px
+
+			&.active
+				z-index: 99
+
+				.about__map-city
+					display: block
+					pointer-events: all
+
+				.row
+
+					> div
+						background: #e3e2e6
+
+
+			.row
+				cursor: pointer
+
+				> div
+					display: flex
+					align-items: center
+					padding: 4px 7px
+					border-radius: 20px
+
+				
+
+
+			span
+				display: block
+				size: 10px
+				background: var(--mainColor)
+				border-radius: 50%
+				margin-right: 10px
+
+			
+
+		&-city
+			color: #bfc0c4
+			display: none
+			min-height: 14px
+
+		&-img
+			position: relative
+			border: 18px solid var(--mainColor)
+			width: 143px
+			
+			border-radius: 50%
+			transition: opacity .3s ease
+
+			img 
+				display: block
+			
+			// pointer-events: none
+			// transition: transform .3s ease
+
+			&-wr
+				opacity: 0
+				pointer-events: none
+				padding-bottom: 30px
+				cursor: pointer
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+
+				&.js__hover
+					opacity: 1
+					pointer-events: all
+
+
+			&.video
+				&:before 
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					display: block
+					background: url('../img/ico-map-video.png') no-repeat center
+					z-index: 1
+
+			&.photo
+				&:before 
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					display: block
+					background: url('../img/ico-map-zoom.png') no-repeat center, rgba(94, 154, 220, 0.58)
+					border-radius: 50%
+					z-index: 1
+
+
+			img
+				size: 107px
+				border-radius: 50%
+
+.fancybox-caption
+
+	bottom: 40px !important
+	color: #fff !important
+	font-size: 14px !important
+	font-weight: 400 !important
+	left: 45px !important
+	line-height: 1 !important
+	padding: 8px 12px !important
+	right: initial !important
+	opacity: 1 !important
+	visibility: visible !important
+	display: inline-block !important
+	width: auto !important
+	background: var(--mainColor)
+	border-radius: 20px
+
+	&:after
+		display: none !important
+
+	&:before
+		position: static !important
+		size: 11px !important
+		border-radius: 50% !important
+		background: #fff !important
+		display: inline-block !important
+		margin-right: 10px !important
+
+
+
+.fancybox-inner
+	> .fancybox-caption
+		display: none !important
+.fancybox-info-map
+
+
+	.fancybox-content
+		outline: rgb(255, 255, 255) solid 13px
+
+	// .fancybox-button
+	// 	&--close
+	// 		margin: 18px 18px 0 auto
+	// 		display: block
+	// 		position: relative
+	// 		z-index: 10
+
+
+	// 		border-radius: 50% !important
+	// 		background: #fff !important
+
+	// 	svg
+	// 		color: #000
+
+
+
+
+
+
+@media screen and (max-width: 1600px)
+
+	.about-map-wr
+		// transform: scale(.9)
+@media screen and (max-width: 1300px)
+
+	.about__map-marker span
+		width: 5px
+		height: 5px
+
+@media screen and (max-width: 1000px)
+
+	.about-map-wr
+		padding: 0 1.4rem
+		column-count: 3
+
+		> img
+			display: none
+
+	.about__map
+		&-el
+			position: relative
+			left: 0 !important
+			top: 0 !important
+
+		&-marker
+			flex-direction: row
+			align-items: center
+
+		&-city
+			display: block !important
+
+		&-img
+			border: 3px solid var(--mainColor)
+			display: block
+			width: 50px
+
+			&-wr
+				opacity: 1
+				pointer-events: all
+				padding-bottom: 0
+				padding-left: 20px
+				position: static
+				transform: none
+				left: 0
+
+			img
+				width: 45px
+				height: 45px
+
+			&.video
+				&:before
+					background-size: 14px
+
+@media screen and (max-width: 660px)
+
+	.about-map-wr
+		padding: 0
+		column-count: 1
+
+	.about-map
+		padding: 1.4rem
+
+
+		.wrapper 
+			padding: 0
+
+		&__title
+			font-size: 1.4rem
+			padding-bottom: 25px
+
+	.about__map
+
+		&-el 
+			&:not(:first-child)
+				margin-top: 10px
+
+		&-info
+			opacity: 1
+			width: auto
+			position: relative
+			pointer-events: all 
+			padding-left: 20px
+			text-align: left
+			display: none
+
+		&-city 
+			font-size: rem(17)
+			font-weight: 400
+
+	.fancybox-caption
+		bottom: calc(-100%) !important
+		left: 0!important
+		right: 0 !important
+
+		&:before 
+			display: none !important
+
+	.fancybox-info-map
+		.fancybox-content
+			outline: none
+
+		.fancybox-slide
+			padding: 1.4rem !important
+
+
+
+

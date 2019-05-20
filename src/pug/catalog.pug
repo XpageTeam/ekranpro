@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.page-catalog
+		//- include inc/header.pug
+		
+		main#content
+			.content
+				.catalog
+					.catalog-menu
+						.catalog-menu__logo
+							span 
+								include ../img/logo.svg
+						.catalog-menu__item
+							a(href="#").catalog-menu__link LED экраны
+						.catalog-menu__item
+							a(href="#").catalog-menu__link LСD панели
+						.catalog-menu__item
+							a(href="#").catalog-menu__link Информационные киоски
+						.catalog-menu__item
+							a(href="#").catalog-menu__link Интерактивная навигация
+
+					.catalog-cont
+						.catalog__header
+							.wrapper-head-link
+								.wr-head-link
+									.head-link
+										a(href="#") Авторизованный партнер LG Electronics 
+									.head-link
+										a(href="#") Сертификат ISO 9001
+							.head-phone
+								a(href="tel: 88043336895 ") 8 804-3336-895
+							.burger
+								span
+						.catalog__list
+							each title, i in ['Торговый центр «Метрополис»', 'Премиум букмекерский клуб OscarYard', 'Видеостена для университета им. Сеченова', 'Интерьерный экран. Налоговая', 'Видеостена. ГУ МЧС России по Иркутской обл.', 'Интерьерный экран. Фитнес-клуб', 'Торговый центр «Метрополис']
+								a(href="#").catalog__item
+									figure.catalog__item-img
+										img(src="img/photos/catalog-"+(i+1)+".jpg", alt="")
+									figure.catalog__item-title=title
+
+		//- include inc/footer.pug
+		include inc/scripts.pug

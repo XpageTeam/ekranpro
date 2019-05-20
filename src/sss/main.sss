@@ -1,0 +1,250 @@
+@import "../css/common.css"
+
+@import "_vars.sss"
+@import "_base.sss"
+@import "_form-elements.sss"
+
+@import "../css/swiper.css"
+@import "selectize/dist/css/selectize.default.css"
+
+@import "_btn.sss"
+@import "_burger.sss"
+@import "_header.sss"
+@import "_main-banner.sss"
+@import "_main-banner-inner.sss"
+@import "_main-advantages.sss"
+@import "_main-services.sss"
+@import "_main-our-work.sss"
+@import "_main-contacts.sss"
+@import "_tabs.sss"
+@import "_features.sss"
+@import "_advantages.sss"
+@import "_review.sss"
+@import "_clients.sss"
+@import "_contacts.sss"
+@import "_contacts-page.sss"
+@import "_slider-middle.sss"
+@import "_catalog.sss"
+@import "_main-nav.sss"
+@import "_main-sliders.sss"
+@import "_about-intro.sss"
+@import "_about-advantages.sss"
+@import "_about-map.sss"
+@import "_about-history.sss"
+@import "_about-team.sss"
+@import "_portfolio-slider.sss"
+@import "_links.sss"
+@import "_color.sss"
+@import "_footer.sss"
+@import "_standart.sss"
+@import "_error.sss"
+@import "_paginator.sss"
+@import "_project.sss"
+
+
+a
+	transition: color .2s ease
+
+.wrapper
+	padding: 0 1.4rem
+
+body[class*="color-"]
+
+	.content
+		> *
+			&:first-child
+				padding-top: 276px
+
+.fancybox-bg
+	background: rgba(30, 30, 30, 0.28) !important
+
+.fancy-form-after
+	.fancybox-content
+		background: #fff !important
+		padding: 50px !important
+
+	.fancybox-close-small
+		color: #000 !important
+		top: 0 !important
+		right: 0 !important
+
+.fancybox-content
+	padding: 0 !important
+
+	.fancybox-close-small
+		color: #000 !important
+		top: 0 !important
+		right: 0 !important
+
+	.contacts__form
+		background: var(--secondColor)
+
+.fancybox-close-small
+	z-index: 9999
+
+.fancybox-certificate
+
+	.fancybox-slide 
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		height: 100%
+
+		&:before
+			display: none !important 
+
+	.head-modal
+		display: flex !important
+		background: #fff !important
+		padding: 2rem !important
+
+	.item	
+		margin-left: 30px
+
+
+
+
+	#head-modal1
+		display: flex !important
+
+.scroll-top
+	position: fixed
+	right: 100px
+	bottom: 210px
+	display: none
+	size: 64px
+	border-radius: 50%
+	background: rgba(255, 255, 255, 0.48)
+	border: 1px solid var(--mainColor)
+	z-index: 100
+	cursor: pointer
+
+	&:before
+		content: ''
+		display: block
+		size: 20px
+		position: absolute
+		top: calc(50% - 6px)
+		left: calc(50% - 10px)
+		border-top: 1px solid var(--mainColor)
+		border-right: 1px solid var(--mainColor)
+		transform: rotate(-45deg)
+
+
+
+@media screen and (max-width: 1600px)
+
+	.fancybox-content
+		.contacts
+			&__form
+				padding: 30px 70px
+				.forms-submit-cont
+					margin-top: 30px
+
+			&__title
+				margin-bottom: 0
+
+
+
+
+	.wrapper--big
+		max-width: 1490px
+
+	body[class*="color-"]
+
+		.content
+			> *
+				&:first-child
+					padding-top: 175px
+
+	.scroll-top
+		right: 50px
+
+
+
+
+
+@media screen and (max-width: 1500px)
+	.scroll-top
+		right: 40px
+
+@media screen and (max-width: 1400px)
+	
+	.scroll-top
+		right: 25px
+
+@media screen and (max-width: 1200px)
+
+	body[class*='color-'] .main-banner-inner:before
+		width: 372px
+
+	.scroll-top
+		bottom: 150px
+
+
+@media screen and (max-width: 1000px)
+
+	.wrapper-head-link
+		display: none
+
+	body[class*="color-"] .content > *:first-child
+		padding-top: 115px
+
+
+
+@media screen and (max-width: 660px)
+
+	.scroll-top
+		bottom: 20px
+		width: 46px
+		height: 46px
+
+		&:before 
+			top: calc(50% - 4px)
+			left: calc(50% - 7px)
+			width: 14px
+			height: 14px
+
+	html, body.main
+		overflow-x: hidden
+		overflow-y: auto
+
+	.wrapper--big
+		padding: 0 1.4rem
+
+	.inner .content > *:first-child
+		padding-top: 225px
+
+	.fancybox-slide--html
+		padding: 0 !important
+
+	.fancybox-content
+		.contacts__form
+			padding: 1.4rem
+
+	.footer__copy
+		text-align: center
+
+	.head-modal
+		flex-direction: column
+		padding: 0 !important
+
+	.main-nav__cont
+		.wr-head-link
+			margin-top: 20px
+
+	.fancybox-certificate 
+		#head-modal1
+			width: 100%
+			align-items: center
+
+		.fancybox-content
+			margin-bottom: 0 !important
+
+
+		.item
+			margin-left: 0
+
+			&:not(:first-child)
+				margin-top: 20px

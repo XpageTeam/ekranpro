@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+
+		
+		main#content
+			.content
+				.main-banner
+
+					.wrapper
+						.scroll Scroll
+						.socials
+							.socials__item
+								a(href="#") Facebook
+							.socials__item
+								a(href="#") Instagram
+							.socials__item
+								a(href="#") Вконтакте
+						.main-banner__cont
+							.main-banner__info
+								.main-banner__title Интеграция<br> профессиональных<br> экранов
+
+							.main-banner__img
+								picture
+									source(srcset="img/photos/main-slide-1.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+									source(srcset="img/photos/main-slide-1.jpg" media="screen and (max-width: 480px)")
+									img
+
+								
+						
+
+				.main-advantages
+					.wrapper 
+						.main-advantages__cont
+							.main-advantages__list
+								.main-advantages__item-cont
+									.main-advantages__item
+										.main-advantages__item-title На рынке с 2010 года
+										.main-advantages__item-text Наша компания зарегистрирована в 2010 году. Все это время мы не меняли сферу нашей деятельности и накопили богатый опыт в производстве, интеграции, обслуживании различного оборудования для визуализации информации. Вы можете быть уверены в нашей компетенции и быть спокойными при реализации проекта с нами
+								
+								.main-advantages__item-cont
+									.main-advantages__item
+										.main-advantages__item-title Подбор и интеграция<br> с существующим оборудованием
+										.main-advantages__item-text При работе с нами, мы предлагаем нашим клиентам полную интеграцию с существующими системами. Мы проводим аудит существующего парка оборудования и систем управления, анализируем поставленные задачи и подбираем оптимальное решение
+								.main-advantages__item-cont
+									.main-advantages__item
+										.main-advantages__item-title Собственное производство,<br> сертифицированное  по ISO 9001:2015
+										.main-advantages__item-text Мы уделяем большое внимание качеству поставляемого нами оборудования и качеству всех бизнес-процессов, которые позволяют добиться наилучшего результата.<br> Все используемые нами комплектующие имеют сертификаты соответствия. В 2018 году мы прошли сертификацию по международной системе менеджмента качества ISO 9001:2015 
+								.main-advantages__item-cont 
+									.main-advantages__item
+										.main-advantages__item-title Сервисная служба 24/7
+										.main-advantages__item-text Мы понимаем насколько важно для наших клиентов оперативное решение возникающих вопросов. Для одних клиентов это вопрос национальной безопасности, для других это вопрос больших денег. Именно для таких случаем мы гарантировать своим клиентам сервисную поддержку 24 часа, v7 дней в неделю на всей территории России и СНГ
+
+
+				.main-services
+					.wrapper 
+						.main-services__title Услуги
+					.main-services__cont
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.main-services__slide-wr.blue
+										.main-services__img
+											img(src="img/photos/main-services.jpg", alt="")
+										.main-services__info
+											.main-services__info-title LED<br> Экраны
+											.main-services__info-text Сочная, яркая и контрастная<br> картинка даже в самый солнечный день<br> Экраны в наличии
+								.swiper-slide
+									.main-services__slide-wr.red
+										.main-services__img
+											img(src="img/photos/main-services-2.jpg", alt="")
+										.main-services__info
+											.main-services__info-title LED<br> Экраны
+											.main-services__info-text Сочная, яркая и контрастная<br> картинка даже в самый солнечный день<br> Экраны в наличии
+								.swiper-slide
+									.main-services__slide-wr.green
+										.main-services__img
+											img(src="img/photos/main-services-3.jpg", alt="")
+										.main-services__info
+											.main-services__info-title LED<br> Экраны
+											.main-services__info-text Сочная, яркая и контрастная<br> картинка даже в самый солнечный день<br> Экраны в наличии
+								.swiper-slide
+									.main-services__slide-wr.orange
+										.main-services__img
+											img(src="img/photos/main-services-4.jpg", alt="")
+										.main-services__info
+											.main-services__info-title LED<br> Экраны
+											.main-services__info-text Сочная, яркая и контрастная<br> картинка даже в самый солнечный день<br> Экраны в наличии
+						.main-services__nav
+							.swiper-button-prev
+							.swiper-button-next
+						.main-services__pagination
+							.swiper-pagination
+
+				.main-our-work
+					.main-our-work__cont
+						.main-our-work__info 
+							.main-our-work__arrow
+								.swiper-button-next
+								.swiper-button-prev
+							.main-our-work__title Наши<br> работы
+						.main-our-work__slider
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-2.jpg", alt="")
+											.main-our-work__item-text Премиум букмекерский<br> клуб OscarYard
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-3.jpg", alt="")
+											.main-our-work__item-text Видеостена для университета им. Сеченова
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+								.swiper-scrollbar
+				.main-contacts
+					.wrapper 
+						.main-contacts__cont
+							.main-contacts__title Связаться с нами
+							form(action="")
+								.forms-wrap
+									.forms__input-cont
+										input(required="" type="text").forms__input
+										label.forms__label Ваше имя:
+										.forms__error-message
+										i.forms__error-message-icon
+									.forms__input-cont
+										input(required="" type="text").forms__input
+										label.forms__label Ваш телефон:
+										.forms__error-message
+										i.forms__error-message-icon
+								.forms-submit-cont
+									input(type="submit" value="Отправить заявку").forms__submit
+								.forms-info Нажимая кнопку вы даете информированное согласие на <a href="#">обработку своих персональных данных</a>
+
+
+
+
+
+
+
+							
+			
+
+		include inc/footer.pug
+		include inc/scripts.pug

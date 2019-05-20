@@ -1,0 +1,102 @@
+.links
+	position: absolute
+	top: 0
+	right: 0
+	transform: translate3d(0,0,0)
+	z-index: 1
+
+	&__list 
+		display: flex 
+		flex-direction: column
+		align-items: flex-end
+
+	&__item 
+		size: auto 65px 
+		display: block
+		transition: transform .3s ease, margin .3s ease
+		color: #fff
+		padding: 10px 30px 10px 15px
+		display: flex 
+		flex-direction: column
+		justify-content: center
+		transform: translate3d(0,0,0)
+		margin-right: -15px
+		animation: transform 1s ease-in-out
+		// animation-delay: 3s
+
+		&:nth-child(1)
+			animation-delay: 2.0s
+		&:nth-child(2)
+			animation-delay: 2.2s
+		&:nth-child(3)
+			animation-delay: 2.3s
+		&:nth-child(4)
+			animation-delay: 2.5s
+		&:nth-child(5)
+			animation-delay: 2.7s
+
+
+		&:hover 
+			transform: translate3d(100%,0,0) !important
+			margin-right: 0
+
+		&:not(:first-child)
+			margin-top: 30px
+
+		&.active
+			margin-right: -30px
+			// transform: translate3d(100%,0,0)
+			
+			&:hover
+				margin-right: 0
+
+	&--blue 
+		background: var(--mainColor)
+	&--red
+		background: #e5564f
+	&--green
+		background: #73b87a
+	&--orange
+		background: #f49746
+	&--fiolet
+		background: #865ec8 
+
+
+@keyframes transform
+	0%
+		transform: translate3d(0,0,0)
+		margin-left: -30px
+		margin-right: 0
+	20%
+		transform: translate3d(100%,0,0)
+		margin-left: -30px
+		margin-right: 0
+	90%
+		transform: translate3d(100%,0,0)
+		margin-left: -30px
+		margin-right: 0
+
+	99%
+		transform: translate3d(0,0,0)
+		margin-left: 0
+		margin-right: -15px
+	100%
+		transform: none
+
+
+
+
+@media screen and (max-width: 1600px)
+	.links__item
+		&:not(:first-child)
+			margin-top: 15px
+
+@media screen and (max-width: 1200px)
+
+	.links__item
+		height: auto
+
+@media screen and (max-width: 667px)
+
+	.links
+		display: none

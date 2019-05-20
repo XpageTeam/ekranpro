@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title О компании
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.page-about
+		include inc/header.pug
+		
+		main#content
+			.content
+				.about-top
+					.wrapper
+						.scroll Scroll
+						.socials
+							.socials__item
+								a(href="#") Facebook
+							.socials__item
+								a(href="#") Instagram
+							.socials__item
+								a(href="#") Вконтакте
+
+						.about-intro
+							.about-intro__title Миссия компании
+							.about-intro__text Миссия - делаем технологии визуализации доступные вашему бизнесу. Подбираем и внедряем самые инновационные решения, при которые выигрываете вы, выигрываем мы и выигрывают ваши клиенты. Win-Win-Win!
+
+
+						.about-advantages
+							.about-advantages__list
+								.about-advantages__item
+									.about-advantages__img
+										img(src="img/ico-a-1.png", alt="")
+									.about-advantages__text На рынке с 2010 года. Работаем с одним юрлицом зарегистрированным в 2010 году
+								.about-advantages__item
+									.about-advantages__img
+										img(src="img/ico-a-3.png", alt="")
+									.about-advantages__text Собственное производство, сертифицированное по ISO 9001:2015
+								.about-advantages__item
+									.about-advantages__img
+										img(src="img/ico-a-2.png", alt="")
+									.about-advantages__text Подбираем и интегрируем оборудование с системами вашей компании
+								.about-advantages__item
+									.about-advantages__img
+										img(src="img/ico-a-5.png", alt="")
+									.about-advantages__text Честные цены. Работаем без посредников
+								.about-advantages__item
+									.about-advantages__img
+										img(src="img/ico-a-4.png", alt="")
+									.about-advantages__text Сервисная служба 24/7
+
+				.about-map
+					.wrapper
+						img(src="img/about-map.png", alt="")
+					.about-map-wr
+
+
+				.main-sliders__cont
+					.wrapper
+						.main-sliders
+							.main-sliders__title-cont
+								.main-sliders__title.active(data-id="stock") 
+									span.ico-cross
+									span LED экраны
+									.main-sliders__text
+										.text-page
+											p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.  
+
+								.main-sliders__title(data-id="new")
+									span.ico-cross
+									span LCD панели
+									.main-sliders__text
+										.text-page
+											p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.
+								.main-sliders__title(data-id="interaktiv") 
+									span.ico-cross
+									span Интерактивная навигация Интерактивная навигация Интерактивная навигация Интерактивная навигация
+									.main-sliders__text
+										.text-page
+											p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.
+								.main-sliders__title(data-id="information") 
+									span.ico-cross
+									span Информационные киоски
+									.main-sliders__text
+										.text-page
+											p Поставка и установка светодиодных экранов от ведущих мировых производителей. Светодиодные экраны это передовая технология которая позволяет отображать информацию на носителе любого размера и формы, без швов, для улицы и интерьера.
+							.main-sliders__sliders
+								.main-sliders__sliders-line
+								.stock-slider#stock.active
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 4; i++)
+												.swiper-slide
+													a(href="#").stock-slider__slide
+														img(src="img/photos/stock-img-1.jpg")
+															
+										
+									button.slick-next.slick-arrow
+								.stock-slider#new
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 4; i++)
+												.swiper-slide
+													a.stock-slider__slide(href="#")
+														img(src="img/photos/stock-img-1.jpg")
+										.swiper-pagination
+									button.slick-next.slick-arrow
+								.stock-slider#interaktiv
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 4; i++)
+												.swiper-slide
+													a(href="#").stock-slider__slide
+														img(src="img/photos/stock-img-1.jpg")
+										.swiper-pagination
+									button.slick-next.slick-arrow
+								.stock-slider#information
+									button.slick-prev.slick-arrow
+									.swiper-list
+										.swiper-wrapper
+											- for (let i = 0; i < 4; i++)
+												.swiper-slide
+													a(href="#").stock-slider__slide
+														img(src="img/photos/stock-img-1.jpg")
+										.swiper-pagination
+									button.slick-next.slick-arrow
+
+				.history
+					.wrapper
+						.history-cont
+							.history-num
+								.history-num__list
+									.history-num__item
+										span Лет
+										div 8
+									.history-num__item
+										span Проектов
+										div 2000
+									.history-num__item
+										span Команда
+										div 12
+							.history-stage
+								.history-stage__title Наша история
+								.history-stage__list
+									.history-stage__item
+										.history-stage__year 2010
+										.history-stage__item-text Основание компании. Открытие офиса продаж в Екатеринбурге
+									.history-stage__item
+										.history-stage__year 2011
+										.history-stage__item-text Фокусировка на продаже светодиодной продукции
+									.history-stage__item
+										.history-stage__year 2012
+										.history-stage__item-text Запуск сборочного производства светодиодных экранов
+									.history-stage__item
+										.history-stage__year 2013
+										.history-stage__item-text Выход на федеральный уровень. Реализаций первых проектов по России
+									.history-stage__item
+										.history-stage__year 2014
+										.history-stage__item-text Оснащение Чемпионата мира по дзюдо 2014 светодиодными табло
+									.history-stage__item
+										.history-stage__year 2015
+										.history-stage__item-text Реализация крупных проектов для Аэропорт Домодедово, Газпром-Уфа, Минстрой Свердловской области
+									.history-stage__item
+										.history-stage__year 2016
+										.history-stage__item-text Открытие офиса в Москве
+									.history-stage__item
+										.history-stage__year 2017
+										.history-stage__item-text Реализовали более 50 проектов. Работа с федеральными сетями и гос. компаниями
+									.history-stage__item
+										.history-stage__year 2018
+										.history-stage__item-text Получение сертификата ISO и статус авторизированного партнера LG
+
+				.portfolio-slider-cont
+					.wrapper
+						.portfolio-slider
+							.portfolio-slider__arrow
+								.swiper-button-prev
+								.swiper-button-next
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.portfolio-slider__item
+											figure.portfolio-slider__item-img
+												img(src="img/photos/portfolio-img-1.jpg", alt="")
+											.portfolio-slider__item-info
+												.portfolio-slider__item-title Производство<br> светодиодных экранов
+												.portfolio-slider__item-text Сборочное производство светодиодных экранов осуществляется на собственных площадях. Мы закупаем только проверенные комплектующие от крупнейших поставщиков.  Эффективно налаженные бизнес процессы позволяют осуществлять контроль на всех этапах: производство в Китае, логистика, изготовление светодиодных экранов в России и отгрузка клиенту. В 2018 году мы получили сертификат соответствия ISO 9001:2015
+									.swiper-slide
+										.portfolio-slider__item
+											figure.portfolio-slider__item-img
+												img(src="img/photos/portfolio-img-2.jpg", alt="")
+											.portfolio-slider__item-info
+												.portfolio-slider__item-title Производство светодиодных экранов
+												.portfolio-slider__item-text Сборочное производство светодиодных экранов осуществляется на собственных площадях. Мы закупаем только проверенные комплектующие от крупнейших поставщиков.  Эффективно налаженные бизнес процессы позволяют осуществлять контроль на всех этапах: производство в Китае, логистика, изготовление светодиодных экранов в России и отгрузка клиенту. В 2018 году мы получили сертификат соответствия ISO 9001:2015
+									.swiper-slide
+										.portfolio-slider__item
+											figure.portfolio-slider__item-img
+												img(src="img/photos/portfolio-img-1.jpg", alt="")
+											.portfolio-slider__item-info
+												.portfolio-slider__item-title Производство<br> светодиодных экранов
+												.portfolio-slider__item-text Сборочное производство светодиодных экранов осуществляется на собственных площадях. Мы закупаем только проверенные комплектующие от крупнейших поставщиков.  Эффективно налаженные бизнес процессы позволяют осуществлять контроль на всех этапах: производство в Китае, логистика, изготовление светодиодных экранов в России и отгрузка клиенту. В 2018 году мы получили сертификат соответствия ISO 9001:2015
+									.swiper-slide
+										.portfolio-slider__item
+											figure.portfolio-slider__item-img
+												img(src="img/photos/portfolio-img-2.jpg", alt="")
+											.portfolio-slider__item-info
+												.portfolio-slider__item-title Производство светодиодных экранов
+												.portfolio-slider__item-text Сборочное производство светодиодных экранов осуществляется на собственных площадях. Мы закупаем только проверенные комплектующие от крупнейших поставщиков.  Эффективно налаженные бизнес процессы позволяют осуществлять контроль на всех этапах: производство в Китае, логистика, изготовление светодиодных экранов в России и отгрузка клиенту. В 2018 году мы получили сертификат соответствия ISO 9001:2015
+							.swiper-pagination.timer
+								.timer
+									.timer__bullet.timer__bullet--active
+										canvas.timer__bullet-canvas(width="55px" height="55px")
+										.timer__bullet-number 01
+									- for (let i = 2; i <= 4; i++)
+										.timer__bullet
+											canvas.timer__bullet-canvas(width="55px" height="55px")
+											.timer__bullet-number="0"+i
+				.team-cont
+					.wrapper
+						.team
+							.team-title Команда
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.team__item
+											figure.team__item-img
+												img(src="img/photos/post-1.jpg", alt="")
+											.team__item-info
+												.team__item-title Михаил Фомичев
+												.team__item-post Генеральный директор
+									.swiper-slide
+										.team__item
+											figure.team__item-img
+												img(src="img/photos/post-2.jpg", alt="")
+											.team__item-info
+												.team__item-title Михаил Фомичев
+												.team__item-post Генеральный директор
+									.swiper-slide
+										.team__item
+											figure.team__item-img
+												img(src="img/photos/post-3.jpg", alt="")
+											.team__item-info
+												.team__item-title Михаил Фомичев
+												.team__item-post Генеральный директор
+									.swiper-slide
+										.team__item
+											figure.team__item-img
+												img(src="img/photos/post-4.jpg", alt="")
+											.team__item-info
+												.team__item-title Михаил Фомичев
+												.team__item-post Генеральный директор
+									.swiper-slide
+										.team__item
+											figure.team__item-img
+												img(src="img/photos/post-1.jpg", alt="")
+											.team__item-info
+												.team__item-title Михаил Фомичев
+												.team__item-post Генеральный директор
+							.team__arrow
+								.swiper-button-prev
+								.swiper-button-next
+
+
+
+
+
+
+
+					
+				
+				.clients
+					.wrapper
+						.clients-cont
+							.clients-intro
+								.clients-title Клиенты
+								.clients-text Мы работаем с клиентами различных типов бизнеса, начиная от малых предприятий и заканчивая крупными международными компаниями
+								.clients__arrow
+									.swiper-button-prev
+									.swiper-button-next
+							.clients__list
+								.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="" )
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-10.png", alt="")
+												.clients__item-info
+													.clients__item-title Экран для Ледовой арены
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-11.png", alt="")
+												.clients__item-info
+													.clients__item-title Интерьерный экран. Горный университет (УГГУ)
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-12.png", alt="")
+												.clients__item-info
+													.clients__item-title Видеостена. ГУ МЧС России по Иркутской обл.
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-13.png", alt="")
+												.clients__item-info
+													.clients__item-title Видеостена. Налоговая
+													.clients__item-city г. Глазов
+										.swiper-slide
+											a(href="").clients__item
+												.clients__item-img
+													figure
+														img(src="img/photos/clients-1.jpg", alt="")
+													.clients__item-hidden
+														figure
+															img(src="img/photos/clients-14.png", alt="")
+												.clients__item-info
+													.clients__item-title Экран для Ледовой арены
+													.clients__item-city г. Глазов
+
+				
+
+				.main-our-work
+					.main-our-work__cont
+						.main-our-work__info 
+							.main-our-work__arrow
+								.swiper-button-next
+								.swiper-button-prev
+							.main-our-work__title Наши<br> работы
+						.main-our-work__slider
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-2.jpg", alt="")
+											.main-our-work__item-text Премиум букмекерский<br> клуб OscarYard
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-3.jpg", alt="")
+											.main-our-work__item-text Видеостена для университета им. Сеченова
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+								.swiper-scrollbar
+
+		include inc/footer.pug
+		include inc/scripts.pug

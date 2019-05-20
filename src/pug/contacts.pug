@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Контакты
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.page-contacts
+		include inc/header.pug
+		
+		main#content
+			.content
+				.wrapper
+					.contacts__cont
+						.contacts-info
+							h1.contacts-info__title Контакты
+							.contacts-info__list
+								.contacts-info__item
+									.contacts-info__label Федеральный номер:
+									.contacts-info__link
+										a(href="tel: 88001000586") 8-800-1000-586
+								.contacts-info__item
+									.contacts-info__label Общая почта:
+									.contacts-info__link
+										a(href="mailto: zakaz@ekranpro.ru") zakaz@ekranpro.ru
+								.contacts-info__item
+									.contacts-info__label Свежие новости:
+									.contacts-info__links
+										a(href="#") Facebook
+										a(href="#") Instagram
+										a(href="#") Вконтакте
+							.contacts-info__btn
+								a(href="#").btn Связаться с нами
+
+
+					.contacts__map
+						.contacts__map-el.moscow
+							.contacts__map-marker
+								span
+							address.contacts__map-info
+								.contacts__map-city 115419, г. Москва
+								.contacts__map-street 2-ой Рощинский проезд, д. 8 стр. 2, офис 202
+								.contacts__map-phone
+									a(href="tel: +74993502745") +7 (499) 350-27-45
+								.contacts__map-email
+									a(href="mailto: msk@ekranpro.ru") msk@ekranpro.ru
+						.contacts__map-el.ekb
+							.contacts__map-marker
+								span
+							address.contacts__map-info
+								.contacts__map-city 620014, г. Екатеринбург
+								.contacts__map-street Антона Валека, д. 13 офис 402а 
+								.contacts__map-phone
+									a(href="tel: +73433861945") +7 (343) 386-19-45
+								.contacts__map-email
+									a(href="mailto: ekb@ekranpro.ru") ekb@ekranpro.ru
+
+						.map
+							img(src="img/map.png", alt="")
+				
+
+		include inc/footer.pug
+		include inc/scripts.pug

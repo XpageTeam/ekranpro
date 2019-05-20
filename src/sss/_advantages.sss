@@ -1,0 +1,161 @@
+.advantages
+	background: var(--secondColor)
+	padding-bottom: 125px
+	font-family: "Montserrat"
+	font-weight: 300
+
+	&-cont
+		display: flex
+
+	&-list
+		&__title, &__text 
+			width: 50%
+
+		&__text
+			position: relative
+			
+			padding: 45px
+			border: 1px solid var(--borderColor)
+
+			&:before 
+				content: ''
+				position: absolute
+				top: -5px
+				left: -5px
+				display: block
+				size: 10px
+				background: var(--mainColor)
+				border-radius: 50%
+				z-index: 2
+
+			&:after 
+				content: ''
+				display: block
+				size: 10px
+
+			.text-page
+				// opacity: 0
+				transition: opacity .3s ease
+
+			&.active 
+				.text-page
+					opacity: 1 !important
+
+
+	&-item
+		&__title
+			position: relative
+			display: flex
+			align-items: center		
+			padding: 20px 1.4rem 10px 0
+			cursor: pointer
+
+			&:last-child
+				&:before 
+					opacity: 0
+
+				&.active
+					&:before 
+						opacity: 1
+
+			// ~ 
+			// 	&:after 
+			// 		top: 1px
+
+			&:after 
+				content: ''
+				position: absolute
+				right: -1px
+				width: 43px
+				height: 99%
+				background: var(--secondColor)
+				display: block
+
+			&:before 
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 100px
+				width: calc(100% - 100px)
+				height: 1px
+				background: var(--borderColor)
+				display: block
+
+			&.active, &:hover
+
+				.ico-cross
+					background: url('../img/ico-cross.svg') no-repeat center, #5e9adc
+
+			&.active
+				&:after
+					right: -1px
+					top: 0
+					z-index: 1
+
+				&:not(:last-child)
+
+.ico-cross
+	display: block
+	flex: none
+	
+	size: 63px
+	border-radius: 50%
+	background: url('../img/ico-cross.svg') no-repeat center
+	background-color: #d8d9db
+	transition: background .3s ease
+	margin-right: 35px
+
+
+@media screen and (max-width: 1500px)
+
+	.advantages-item__title
+		padding: 15px 1.4rem 10px 0
+
+
+
+@media screen and (max-width: 1400px)
+	.advantages
+		padding-bottom: 100px
+
+
+@media screen and (max-width: 1200px)
+
+	.ico-cross
+		size: 40px
+		margin-right: 20px
+
+	.advantages
+		padding-bottom: 70px
+
+		&-item__title
+			padding: 10px 3rem 10px 0
+
+			&:before
+				left: 60px
+				width: calc(100% - 60px)
+
+			&.active:after
+				top: -1px
+
+		&-list__text
+			padding: 30px
+
+
+@media screen and (max-width: 660px)
+
+	.advantages
+		padding-bottom: 1.4rem
+
+		&-cont
+			flex-direction: column
+
+		&-list
+			&__title
+				width: 100%
+				padding: 10px 1rem 10px 0
+
+			&__text
+				width: 100%
+				margin-top: 17px
+				padding: 15px
+

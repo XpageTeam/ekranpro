@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Интерьерные эраны
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.color-blue.loading
+		include inc/header.pug
+		
+		main#content
+			.content
+				.main-banner-inner
+
+					.wrapper
+						.scroll Scroll
+						.socials
+							.socials__item
+								a(href="#") Facebook
+							.socials__item
+								a(href="#") Instagram
+							.socials__item
+								a(href="#") Вконтакте
+						.main-banner-inner__cont
+							.main-banner-inner__img
+								picture
+									source(srcset="img/photos/main-slide-inner-2.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+									source(srcset="img/photos/main-slide-inner-2.jpg" media="screen and (max-width: 480px)")
+									img
+
+								.links
+									.links__list
+										a(href="#").links__item.links--blue.active
+										a(href="#").links__item.links--red
+										a(href="#").links__item.links--green
+										a(href="#").links__item.links--orange
+
+							.main-banner-inner__info
+								.main-banner-inner__title Интерьерные<br> экраны
+								.main-banner-inner__text Помогаем клиентам легко сориентироваться в планировке торгового центра, вокзала, аэропорта с помощью сенсорной навигации. Для установки на зданиях и уличных конструкциях предлагается светодиодный экран купить с возможностью дальнейшего закрепленияна металлическом основании. Отдельные светодиоды такого оборудования расположены на расстоянии, которое определено минимальной дальностью просмотра.
+								a(href="#").btn Заказать услугу
+
+				
+				.slider-middle
+					.slider-middle__arrow
+						.swiper-button-next
+						.swiper-button-prev
+
+					.slider-middle__list
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.slider-middle__item
+										picture
+											source(srcset="img/photos/slider-middle-1.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+											source(srcset="img/photos/slider-middle-1.jpg" media="screen and (max-width: 480px)")
+											img
+										.slider-middle__info
+											.slider-middle__title Экраны<br> для торговых центров
+											.slider-middle__text
+												.text-page
+													ul
+														li Средняя окупаемость 8 месяцев
+														li Увеличивают продажи ваших арендаторов
+														li Помогают доносить информацию до посетителей
+								.swiper-slide
+									.slider-middle__item
+										picture
+											source(srcset="img/photos/slider-middle-1.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+											source(srcset="img/photos/slider-middle-1.jpg" media="screen and (max-width: 480px)")
+											img
+										.slider-middle__info
+											.slider-middle__title Экраны для торговых центров
+											.slider-middle__text
+												.text-page
+													ul
+														li Средняя окупаемость 8 месяцев
+														li Увеличивают продажи ваших арендаторов
+														li Помогают доносить информацию до посетителей
+
+
+
+
+
+				
+
+				.contacts
+					.wrapper
+						.contacts-cont
+							.contacts__info
+								.contacts__info-text
+									.text-page
+										h6 Реклама на крыше здания
+										p Крышные установки это, пожалуй, самый массивный и значительный вид наружной рекламы. Внушительные размеры таких установок безусловно подчеркивают бренд и высокий статус компании. Установленные на значительной высоте, они видны с различных сторон за несколько километров.<br> Яркие и красочные буквы и логотипы, с подсветкой и объёмными изображениями ежедневно привлекают внимание людей и формируют положительный имидж рекламируемой компании.
+
+										h6 Преимущества
+										p Установка рекламы на крыше имеет массу достоинств. Индивидуальный подход к проектированию каждой установки. Такая реклама запоминается своей нестандартностью и несёт информацию о конкретном бренде. Большая площадь рекламного поля. Имея значительные габаритные размеры и находясь на крыше зданий, такая конструкция доминирует над остальными видами рекламы. Постоянно напоминает жителям города о статусе компании, поднимая её престиж. Существует два варианта изготовления рекламных устройств на крышах: плоские установки – наиболее простые в изготовлении, легко монтируются и имеют доступную цену.
+
+										h6 Преимущества
+										p Установка рекламы на крыше имеет массу достоинств. Индивидуальный подход к проектированию каждой установки. Такая реклама запоминается своей нестандартностью и несёт информацию о конкретном бренде. Большая площадь рекламного поля. Имея значительные габаритные размеры и находясь на крыше зданий, такая конструкция доминирует над остальными видами рекламы. Постоянно напоминает жителям города о статусе компании, поднимая её престиж. Существует два варианта изготовления рекламных устройств на крышах: плоские установки – наиболее простые в изготовлении, легко монтируются и имеют доступную цену.
+							.contacts__form
+								.contacts__title Связаться с нами
+								form(action="")
+									.forms-wrap
+										.forms__input-cont
+											input(required="" type="text").forms__input
+											label.forms__label Ваше имя:
+											.forms__error-message
+											i.forms__error-message-icon
+										.forms__input-cont
+											input(required="" type="text").forms__input
+											label.forms__label Ваш телефон:
+											.forms__error-message
+											i.forms__error-message-icon
+									.forms-submit-cont
+										input(type="submit" value="Отправить заявку").forms__submit
+									.forms-info Нажимая кнопку вы даете информированное согласие на <a href="#">обработку своих персональных данных</a>
+
+				.main-our-work
+					.main-our-work__cont
+						.main-our-work__info 
+							.main-our-work__arrow
+								.swiper-button-next
+								.swiper-button-prev
+							.main-our-work__title Наши<br> работы
+						.main-our-work__slider
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+									.swiper-slide
+										.main-our-work__item
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-2.jpg", alt="")
+											.main-our-work__item-text Премиум букмекерский<br> клуб OscarYard
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-3.jpg", alt="")
+											.main-our-work__item-text Видеостена для университета им. Сеченова
+									.swiper-slide
+										.main-our-work__item
+
+											figure.main-our-work__item-img
+												img(src="img/photos/our-work-1.jpg", alt="")
+											.main-our-work__item-text Торговый центр «Метрополис»
+								.swiper-scrollbar
+
+		include inc/footer.pug
+		include inc/scripts.pug
