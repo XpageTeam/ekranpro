@@ -16,6 +16,21 @@
 		svg
 			display: block
 
+	&-email
+		margin: 0 rem(60) 0 0
+
+		a
+			position: relative
+			font-size: rem(18)
+			display: flex
+			align-items: center
+
+			&:before
+				content: ''
+				display: inline-block
+				margin-right: 20px
+				size: 21px
+				background: url('../img/ico-email.svg') no-repeat center
 
 	&-phone
 		margin: 0 rem(60) 0 auto
@@ -134,14 +149,33 @@
 
 	.head-logo
 		margin-right: 65px
-
+	
 
 @media screen and (max-width: 1400px)
 
 	.head
 		padding: 35px 0
 
+		&-phone
+			margin-right: 1rem !important
 
+			a
+				font-size: 1rem
+
+		&-email
+			margin-right: 0 !important
+
+			a
+				font-size: 1rem
+
+	.nav
+		margin-right: 0 !important
+
+@media (max-width: 1300px)
+	.head
+
+		&-email
+			margin-right: 1.2rem !important
 
 @media screen and (max-width: 1200px)
 	.nav
@@ -154,7 +188,6 @@
 
 		&-cont
 			flex-wrap: wrap
-
 
 
 
@@ -172,9 +205,12 @@
 		padding: 0.4rem 0
 
 
-		&-phone
-			display: none
+		&-phone, &-email
+			margin: 0 !important
 
+			a
+				font-size: 14px
+		
 
 
 	.wr-head-link
@@ -186,5 +222,47 @@
 
 	.logo 
 		img
-			max-width: 95px
+			max-width: 70px
 
+	
+	@supports (display: grid)
+		.head
+
+			&-cont
+				display: grid
+				grid-template-areas: "logo phone burger" "logo email burger"
+				grid-template-columns: 70px 1fr 70px
+				grid-gap: 0 15px
+
+			&-logo
+				grid-area: logo
+				margin-right: 0
+
+			&-phone
+				grid-area: phone
+
+			&-email
+				grid-area: email
+
+			&-email, &-phone
+				display: flex
+				justify-content: center
+
+				a
+
+					&:before
+						margin-right: 8px
+						display: none
+
+		.burger
+			grid-area: burger
+			margin: -15px 0
+			padding-right: 0
+			width: auto
+
+@media (max-width: 365px)
+	@supports (display: grid)
+		.head
+
+			&-cont
+				grid-gap: 0 3px

@@ -20,11 +20,15 @@ $(_ => {
 		return
 
 	for (let slider of sliders){
-		let sliderObject = slider.closest(".stock-slider");
+		const sliderObject = slider.closest(".stock-slider");
 
 		new Swiper(slider, {
 			slidesPerView: 1,
 			effect: 'fade',
+			fadeEffect: {
+				crossFade: !$(sliderObject).hasClass("stock-slider--noslider")
+			},
+			a11y: false,
 			loop: true,
 			navigation: {
 				prevEl: sliderObject.querySelector(".slick-prev"),

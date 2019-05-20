@@ -293,6 +293,7 @@ document.addEventListener("DOMContentLoaded", e => {
 		      autoHeight: true,
 		    }
 		},
+		a11y: false,
 		pagination: {
 			el: ".swiper-pagination",
 			type: "fraction",
