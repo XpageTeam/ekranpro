@@ -8459,7 +8459,8 @@ button.swiper-pagination-bullet {
 		background: #fff;
 }
 .product__item-img{
-			position: relative
+			position: relative;
+			padding: 20px 20px 0 20px
 
 			/* &:hover
  */
