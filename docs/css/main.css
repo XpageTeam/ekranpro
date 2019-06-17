@@ -8542,26 +8542,33 @@ button.swiper-pagination-bullet {
 			line-height: 24px
 }
 .product__item-price{
-			font-size: 1.125rem;
+			/* font-size: rem(18)
+ */
+			font-size: 1.25rem;
 			margin-right: 20px;
-			white-space: nowrap
+			line-height: 1;
+			white-space: nowrap;
+			font-weight: 600
 }
 .product__price-list{
 			display: flex ;
 			flex-direction: column;
-			align-items: flex-start
+			align-items: flex-start;
+			border-left: 2px solid #e5564f;
+			padding: 5px 0 5px 15px
 }
 .product__item-oldprice{
 		color: #9a9a9a;
 		position: relative;
-		line-height: 1
+		line-height: 1;
 		/* padding: 0 5px
  */
+		margin-top: 5px
 }
 .product__item-oldprice:before{
 			content: '';
 			position: absolute;
-			width: 120%;
+			width: 112%;
 			height: 1px;
 			background: #9a9a9a;
 			display: block;

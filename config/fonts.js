@@ -37,6 +37,12 @@ module.exports = {
 							woff: "../fonts/Montserrat/montserrat-regular.woff2",
 						}
 					},
+					600: {
+						url: {
+							woff: "../fonts/Montserrat/montserrat-medium.woff",
+							woff: "../fonts/Montserrat/montserrat-medium.woff2",
+						}
+					},
 					700: {
 						url: {
 							woff: "../fonts/Montserrat/montserrat-bold.woff",
