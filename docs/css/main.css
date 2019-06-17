@@ -37,6 +37,12 @@
 @font-face{
 	font-family:Montserrat;
 	font-style:normal;
+	font-weight:600;
+	src:url(../fonts/Montserrat/montserrat-medium.woff2) format("woff")
+}
+@font-face{
+	font-family:Montserrat;
+	font-style:normal;
 	font-weight:700;
 	src:url(../fonts/Montserrat/montserrat-bold.woff2) format("woff")
 }
@@ -8460,7 +8466,8 @@ button.swiper-pagination-bullet {
 }
 .product__item-img{
 			position: relative;
-			padding: 20px 20px 0 20px
+			padding: 20px 20px 0 20px;
+
 
 			/* &:hover
  */
@@ -8501,6 +8508,13 @@ button.swiper-pagination-bullet {
  */
 			/* 	transition: opacity .3s ease
  */
+}
+.product__item-img img[src*="gallery-production.jpg"]{
+				height: 302px;
+				-o-object-fit: cover;
+				   object-fit: cover;
+				-o-object-position: center;
+				   object-position: center
 }
 .product__item img{
 			display: block;
