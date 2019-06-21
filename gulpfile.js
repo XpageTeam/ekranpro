@@ -93,29 +93,29 @@ gulp.task("move:fonts", _ =>
 		.pipe(gulp.dest("docs/fonts"))
 );
 
-gulp.task('imagemin', () =>  
-	gulp.src('src/img/**/*', {since: gulp.lastRun("imagemin")})
-		 .pipe($.cache($.imagemin([
-			$.imagemin.gifsicle({
-				interlaced: true,
-			}),
-			$.imagemin.jpegtran({
-				progressive: true,
-			}),
-			require("imagemin-jpeg-recompress")({
-				loops: 1,
-				min: 80,
-				max: 95,
-				quality: "high"
-			}),
-			// $.imagemin.svgo(),
-			$.imagemin.optipng({optimizationLevel: 3}),
-      		require("imagemin-pngquant")({quality: '75-85', speed: 5})
-		],{
-     		verbose: true
-    	})))
-		.pipe(gulp.dest('docs/img'))
-);
+// gulp.task('imagemin', () =>  
+// 	gulp.src('src/img/**/*', {since: gulp.lastRun("imagemin")})
+// 		 .pipe($.cache($.imagemin([
+// 			$.imagemin.gifsicle({
+// 				interlaced: true,
+// 			}),
+// 			$.imagemin.jpegtran({
+// 				progressive: true,
+// 			}),
+// 			require("imagemin-jpeg-recompress")({
+// 				loops: 1,
+// 				min: 80,
+// 				max: 95,
+// 				quality: "high"
+// 			}),
+// 			// $.imagemin.svgo(),
+// 			$.imagemin.optipng({optimizationLevel: 3}),
+//       		require("imagemin-pngquant")({quality: '75-85', speed: 5})
+// 		],{
+//      		verbose: true
+//     	})))
+// 		.pipe(gulp.dest('docs/img'))
+// );
 
 
 gulp.task("remove:base64", callback => {del.sync("docs/css/base64.css"); callback()});
@@ -140,7 +140,7 @@ gulp.task("deploy:dist", _ =>
 		.pipe(xpager_conn.dest(xpager_path))
 );
 
-gulp.task("deploy", gulp.series(gulp.parallel("postcss", "pug", "imagemin"), "deploy:dist"));
+gulp.task("deploy", gulp.series(gulp.parallel("postcss", "pug"), "deploy:dist"));
 
 
 
@@ -149,7 +149,7 @@ const local = _ => {
 	gulp.watch(["src/sss/*.sss"], gulp.series("postcss"));
 	gulp.watch('src/pug/**/*', gulp.series("pug"));
 	// gulp.watch("src/js/*.js", gulp.series("babel"));
-	gulp.watch("src/img/**/*", gulp.series("imagemin"));
+	// gulp.watch("src/img/**/*", gulp.series("imagemin"));
 },
 watch = _ => {
 	gulp.watch("docs/css/**/*", gulp.series("deploy:css"));
@@ -169,10 +169,10 @@ gulp.task("deploy:zip", () =>
 		.pipe(xpager_conn.dest(xpager_path))
 );
 
-gulp.task("deploy-to-server", gulp.series(gulp.parallel("postcss", "pug", "imagemin"), gulp.parallel(local, watch)));
+gulp.task("deploy-to-server", gulp.series(gulp.parallel("postcss", "pug"), gulp.parallel(local, watch)));
 
-gulp.task("finish:him", gulp.series(gulp.parallel("postcss", "imagemin"), gulp.parallel("deploy:css", "deploy:js")));
+gulp.task("finish:him", gulp.series(gulp.parallel("postcss"), gulp.parallel("deploy:css", "deploy:js")));
 
-gulp.task("default", gulp.series(gulp.parallel("postcss", "pug", "imagemin", "move:fonts"), gulp.parallel(local, "browser-sync")))
+gulp.task("default", gulp.series(gulp.parallel("postcss", "pug", "move:fonts"), gulp.parallel(local, "browser-sync")))
 
 gulp.task('clearcache', (callback) => { $.cache.clearAll(); callback();});
