@@ -8471,6 +8471,7 @@ button.swiper-pagination-bullet {
 .product__item-img{
 			position: relative;
 			padding: 20px 20px 0 20px;
+			text-align: center;
 }
 .product__item-img img[src*="gallery-production.jpg"]{
 				max-height: 253px;
@@ -8480,8 +8481,9 @@ button.swiper-pagination-bullet {
 				   object-position: center
 }
 .product__item img{
-			display: block;
-			width: 100%
+			display: inline-block
+			/* width: 100%
+ */
 }
 .product__item-info{
 			padding: 34px 28px;
