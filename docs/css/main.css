@@ -8471,49 +8471,6 @@ button.swiper-pagination-bullet {
 .product__item-img{
 			position: relative;
 			padding: 20px 20px 0 20px;
-			display: flex;
-			justify-content: center;
-
-
-			/* &:hover
- */
-			/* 	&:before
- */
-			/* 		opacity: 1
- */
-
-			/* &:before
- */
-			/* 	content: ''
- */
-			/* 	display: block
- */
-			/* 	position: absolute
- */
-			/* 	top: calc(50% - 34px)
- */
-			/* 	left: calc(50% - 34px)
- */
-			/* 	size: 68px
- */
-			/* 	border-radius: 50%
- */
-			/* 	background-image: url('../img/ico-eye.png')
- */
-			/* 	background-color: var(--mainColor)
- */
-			/* 	background-repeat: no-repeat
- */
-			/* 	background-position: center
- */
-			/* 	z-index: 10
- */
-			/* 	cursor: pointer
- */
-			/* 	opacity: 0
- */
-			/* 	transition: opacity .3s ease
- */
 }
 .product__item-img img[src*="gallery-production.jpg"]{
 				max-height: 253px;
@@ -8523,13 +8480,8 @@ button.swiper-pagination-bullet {
 				   object-position: center
 }
 .product__item img{
-			display: block
-			/* max-width: 185px
- */
-			/* object-fit: cover
- */
-			/* object-position: center
- */
+			display: block;
+			width: 100%
 }
 .product__item-info{
 			padding: 34px 28px;
