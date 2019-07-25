@@ -2095,8 +2095,8 @@ button.swiper-pagination-bullet {
 	}
 }
 @media screen and (max-width: 660px){
-			.admin .head-email a[href^="mailto"]{
-				display: none
+		.head-email a[href^="mailto"]{
+			display: none
 	}
 
 	.mobile-soc{
