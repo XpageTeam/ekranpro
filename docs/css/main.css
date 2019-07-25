@@ -1961,6 +1961,9 @@ button.swiper-pagination-bullet {
 			font-family: "Montserrat";
 			font-weight: 300
 }
+.mobile-soc{
+	display: none
+}
 .wr-head-link{
 	display: flex;
 	flex-direction: column
@@ -2092,12 +2095,27 @@ button.swiper-pagination-bullet {
 	}
 }
 @media screen and (max-width: 660px){
+		.head-email a[href^="mailto"]{
+			display: none
+	}
+
+	.mobile-soc{
+		display: flex;
+	}
+
+		.mobile-soc a{
+			width: 30px
+	}
+
+			.mobile-soc a:not(:last-child){
+				margin-right: 15px
+	}
 		.main .head{
 			background: #fff
 	}
 
 	.head{
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;

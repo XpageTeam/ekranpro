@@ -63,6 +63,10 @@
 		/* &:not(:first-child)
 			margin-left: rem(120) */
 
+
+.mobile-soc
+	display: none
+
 .wr-head-link
 	display: flex
 	flex-direction: column
@@ -193,12 +197,25 @@
 
 @media screen and (max-width: 660px)
 
+	.head-email
+		a[href^="mailto"]
+			display: none
+
+	.mobile-soc
+		display: flex
+
+		a
+			width: 30px
+
+			&:not(:last-child)
+				margin-right: 15px
+
 	.main
 		.head
 			background: #fff
 
 	.head
-		position: absolute
+		position: fixed
 		top: 0
 		left: 0
 		right: 0
