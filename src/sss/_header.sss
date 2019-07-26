@@ -211,16 +211,15 @@
 			&:not(:last-child)
 				margin-right: 15px
 
-	.main
-		.head
-			background: #fff
 
 	.head
-		position: fixed
+		position: fixed !important
+		background: #fff
 		top: 0
 		left: 0
 		right: 0
 		padding: 0.4rem 0
+		z-index: 1000
 
 
 		&-phone, &-email
@@ -248,7 +247,7 @@
 
 			&-cont
 				display: grid
-				grid-template-areas: "logo phone burger" "logo email burger"
+				grid-template-areas: "logo phone burger" "logo phone burger"
 				grid-template-columns: 70px 1fr 70px
 				grid-gap: 0 15px
 
@@ -259,8 +258,12 @@
 			&-phone
 				grid-area: phone
 
+				a
+					line-height: 1
+
 			&-email
 				grid-area: email
+				display: none !important
 
 			&-email, &-phone
 				display: flex

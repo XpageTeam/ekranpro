@@ -1818,7 +1818,7 @@ button.swiper-pagination-bullet {
 				width: 40px
 }
 .mobile-menu--open .burger > span{
-			background: 0 0
+			background: 0 0 !important
 }
 .mobile-menu--open .burger > span:before{
 				-webkit-transform: rotate3d(0,0,1,45deg);
@@ -2110,16 +2110,16 @@ button.swiper-pagination-bullet {
 			.mobile-soc a:not(:last-child){
 				margin-right: 15px
 	}
-		.main .head{
-			background: #fff
-	}
+
 
 	.head{
-		position: fixed;
+		position: fixed !important;
+		background: #fff;
 		top: 0;
 		left: 0;
 		right: 0;
 		padding: 0.4rem 0;
+		z-index: 1000;
 	}
 
 
@@ -2150,7 +2150,7 @@ button.swiper-pagination-bullet {
 
 			.head-cont{
 				display: grid;
-				grid-template-areas: "logo phone burger" "logo email burger";
+				grid-template-areas: "logo phone burger" "logo phone burger";
 				grid-template-columns: 70px 1fr 70px;
 				grid-gap: 0 15px
 		}
@@ -2161,11 +2161,16 @@ button.swiper-pagination-bullet {
 		}
 
 			.head-phone{
-				grid-area: phone
+				grid-area: phone;
+		}
+
+				.head-phone a{
+					line-height: 1
 		}
 
 			.head-email{
-				grid-area: email
+				grid-area: email;
+				display: none !important
 		}
 
 			.head-email, .head-phone{
@@ -2703,6 +2708,9 @@ button.swiper-pagination-bullet {
 
 				body[class*="color"] .main-banner-inner__img{
 					margin-right: 0
+	}
+					body[class*="color"] .head-phone a,body[class*="color"] .head-email a{
+						color: #000
 	}
 }
 .main-advantages__cont{
@@ -4571,6 +4579,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 660px){
 
+
+
 	.contacts__info{
 		padding: 25px 0;
 	}
@@ -4846,6 +4856,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 660px){
 
+	
+
 	.page-contacts .content .wrapper{
 		flex-direction: column
 	}
@@ -4858,7 +4870,7 @@ button.swiper-pagination-bullet {
 	}
 
 		.page-contacts .content > *:first-child{
-			padding-top: 0 !important
+			padding-top: 25px !important
 	}
 
 		.page-contacts footer{
@@ -4870,6 +4882,9 @@ button.swiper-pagination-bullet {
 		.page-contacts .developer__img svg{
 			color: #a3a3a3
 	}
+
+
+
 
 	.contacts-info__title{
 		margin-bottom: 18px
@@ -5561,19 +5576,26 @@ button.swiper-pagination-bullet {
 		.page-catalog .content > *:first-child{
 			padding-top: 0 !important
 	}
+			.page-catalog .head-logo{
+				margin-right: 0
+	}
 
-		.page-catalog .head-logo{
-			margin-right: 0
+			.page-catalog .head .logo-1{
+				display: block !important
+	}
+
+			.page-catalog .head .logo-2{
+				display: none !important
 	}
 		body[class*="color-"] .content > *:first-child{
-			padding-top: 115px !important
+			padding-top: 30px !important
 	}
 			body[class*="color-"] .burger span{
-				background: #fff
+				background: #000
 	}
 
 				body[class*="color-"] .burger span:before, body[class*="color-"] .burger span:after{
-					background: #fff
+					background: #000
 	}
 
 					body[class*="color-"].mobile-menu--open .burger span:before, body[class*="color-"].mobile-menu--open .burger span:after{
@@ -6476,7 +6498,7 @@ button.swiper-pagination-bullet {
 	}
 
 		.page-about .content > *:first-child{
-			padding-top: 107px !important
+			padding-top: 0 !important
 	}
 }
 .about-advantages{
@@ -8843,6 +8865,13 @@ body[class*="color-"] .content > *:first-child{
 	}
 }
 @media screen and (max-width: 660px){
+
+	.content{
+		margin-top: 60px !important
+	}
+
+
+
 
 	.scroll-top{
 		bottom: 20px;
